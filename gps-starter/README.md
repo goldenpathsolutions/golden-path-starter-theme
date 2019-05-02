@@ -1,3 +1,31 @@
+# Golden Path Solutions Starter Theme
+
+This is a child theme of the Understrap starter theme.  We used a child theme so it would be easier to integrate Understrap updates with each new project.
+
+## SASS, CSS, and JS
+
+Although we start off using best practices, and minifiying our CSS and JS, we understand this can be cumbersome for developers trying to make small changes after launch.  Therefore, we provide for ways to stop using or override the minified files as discussed below.
+
+We use SASS in this theme, but the style.css file is loaded after main.css, so if you don't want to deal with compiling SASS, you can just add CSS there.
+
+We will usually use minified CSS, but the theme will automatically fall back to using the unminified main.css file if the minified version is missing, so you can delete the minified version if you don't want to use it.
+
+More importantly, the same is true of the main.js, so if you need to edit the JavaScript included in the theme, and don't want to deal with using gulp to re-minify, you can just delete the minified version, and edit the unminified file.
+
+## Theme functions and includes directory
+
+The most fundamental setup functions are in the files beginning with setup-.  These include enqueue functions, text domain definition, etc.
+
+If you want to add your own custom code for the theme, this is the place to do it.
+
+One of our goals is to keep the functions.php file clean, and only add the include statements for the other supporting php scripts there.  We also try to keep each php file short. This should help to make the code more modular, reusable, and arguably easier to navigate.
+
+## 3rd party libraries and the lib directory
+
+We use the lib directory to store 3rd party libraries.  It helps keep our custom code separate from vendor code.
+
+***
+
 # understrap-child
 Basic Child Theme for UnderStrap Theme Framework: https://github.com/understrap/understrap
 

@@ -1,0 +1,97 @@
+/*
+ * Mixin Tunctions
+ *
+ * These mixins tend to actually add some new functionality.
+ */
+
+
+// BEM -----------------------------------------------------------------------------
+/// Block Element
+/// @access public
+/// @param {String} $element - Element's name
+@mixin element($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+
+/// Block Modifier
+/// @access public
+/// @param {String} $modifier - Modifier's name
+@mixin modifier($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}
+
+
+
+//
+// Media Queries -----------------------------------------------------------------------
+//    Use example:
+//    @include for(md) {
+//      max-width: 900px;
+//    }
+//
+//  We're doing desktop first, so queries are for given size and smaller
+
+@mixin for($media) {
+
+  @if $media == sm or $media == md or $media == lg  or $media == xl {
+    $media: map-get($grid-breakpoints, $media);
+  }
+
+  @media (max-width: $media) {
+    @content;
+  }
+
+}
+
+@mixin between($smallest, $largest) {
+
+  $smallest: if(map-has-key($grid-breakpoints, $smallest), map-get($grid-breakpoints, $smallest), $smallest);
+  $largest: if(map-has-key($grid-breakpoints, $largest), map-get($grid-breakpoints, $largest), $largest);
+
+  @media (min-width: $smallest) and (max-width: $largest) {
+    @content;
+  }
+
+}
+
+// breakpoints ------------------------------------------------------------------
+
+@mixin breakpoint($class) {
+  @if $class == xxs { // iphone5 size phones
+    @media only screen and (max-width: 320px) {
+      @content;
+    }
+  } @else if $class == xs {
+    @media only screen and (max-width: 575px) {
+      @content;
+    }
+  } @else if $class == sm {
+    @media only screen and (max-width: 767px) {
+      @content;
+    }
+  } @else if $class == md {
+    @media only screen and (max-width: 991px) {
+      @content;
+    }
+  } @else if $class == lg {
+    @media only screen and (max-width: 1199px) {
+      @content;
+    }
+  } /*@else if $class == xl { // --- implicit
+		@media only screen and (min-width: 1024px) { @content; }
+	}*/
+
+  @else {
+    @warn "Breakpoint mixin supports: xs, sm, md";
+  }
+}
+
+@mixin print() {
+  @media print {
+    @content;
+  }
+}

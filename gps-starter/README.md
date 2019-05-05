@@ -2,6 +2,10 @@
 
 This is a child theme of the Understrap starter theme.  We used a child theme so it would be easier to integrate Understrap updates with each new project.
 
+## DEPENDENCIES
+
+* **ADVANCED CUSTOM FIELDS** — This theme requires ACF. Use the latest version.
+
 ## SASS, CSS, and JS
 
 Although we start off using best practices, and minifiying our CSS and JS, we understand this can be cumbersome for developers trying to make small changes after launch.  Therefore, we provide for ways to stop using or override the minified files as discussed below.

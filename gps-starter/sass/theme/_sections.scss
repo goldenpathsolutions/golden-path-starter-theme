@@ -1,0 +1,819 @@
+/*
+ * Sections
+ *
+ * Sections are usually seen as rows of content on a page, and contain one or more blocks.
+ */
+
+.section {
+
+  overflow-x: hidden;
+  padding: 50px 0;
+  color: $bodyTextGray;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 1;
+
+  &.fg-light { // default is fg-dark
+    color: $white;
+
+    p {
+      color: $white;
+    }
+
+    .eyebrow {
+      color: $white;
+    }
+  }
+
+  &.text-center {
+    .block.block-eyebrow {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &.text-right {
+    .block.block-eyebrow {
+      margin-left: 0;
+      margin-right: auto;
+    }
+  }
+
+  // section background colors as defined by ACF value
+  // note: might needs some additional css above to change text color based on set bg color
+
+  &.bg-dkgray {
+    background-color: $dkGray;
+  }
+
+  &.bg-ltgray {
+    background-color: $ltGray;
+  }
+
+  &.bg-white {
+    background-color: $white;
+  }
+
+
+  /*** default section settings ***/
+
+
+  .container.container-wide {
+    .block.block-eyebrow {
+
+      margin-left: calc(8.3333% - 20px);
+
+      @include for(1340px) {
+        margin-left: 0;
+      }
+    }
+
+  }
+
+  .tagline {
+
+    @extend ._tagline;
+    margin: 12px 0;
+
+    @include breakpoint(sm) {
+      margin: 5px 0;
+    }
+
+    h3 {
+      @extend ._tagline;
+    }
+
+  }
+
+  .body-text {
+    @extend ._body-text;
+
+    p {
+      line-height: 1.7;
+    }
+
+  }
+
+
+  &#header {
+    padding-top: 77px;
+  }
+
+
+  // text and image, image can be on the left or right
+  &.section-flexible {
+
+    .row {
+      margin-left: -30px;
+      margin-right: -30px;
+    }
+
+    .block {
+      padding-left: 30px;
+      padding-right: 30px;
+
+      &.block-info {
+        .tagline {
+          h3 {
+            line-height: 1.2222;
+
+            @include breakpoint(sm) {
+              line-height: 1.2;
+            }
+          }
+        }
+      }
+
+    }
+  }
+
+  #header &.section-info-with-image {
+    //padding-bottom: 64px;
+    height: 450px;
+    
+    @media (max-width: 1100px) {
+    	height: auto;
+    	padding-bottom: 64px;
+    }
+    
+    @include breakpoint(sm) {
+		height: auto;     
+	}
+
+    .video-wrapper {
+      position: absolute;
+      width: 100%;
+    }
+
+    .container {
+      position: relative;
+      top: 0;
+      z-index: 5;
+
+      @include breakpoint(sm) {
+        position: relative;
+      }
+    }
+  }
+
+  // background image with big text inside
+  &.section-tagline {
+
+    padding-top: 75px;
+    padding-bottom: 45px;
+
+    @include breakpoint(sm) {
+      padding-top: 71px;
+      padding-bottom: 34px;
+    }
+
+    .block-eyebrow{
+      margin-bottom: 0;
+    }
+
+    .tagline {
+      margin: 25px 0;
+
+      @include breakpoint(sm) {
+        margin: 18px 0;
+      }
+
+      p {
+        font-size: 32px;
+        line-height: 1.25;
+        font-weight: 300;
+
+        @include between(xs, sm) {
+          font-size: 37.5px;
+          line-height: 1.267;
+        }
+      }
+    }
+
+    .row-tagline {
+      @include breakpoint(sm) {
+        margin: 0 -40px;
+      }
+    }
+
+    .row-button {
+      @include breakpoint(sm) {
+        margin: 0 -40px;
+      }
+    }
+
+    .button {
+
+      @include breakpoint(sm) {
+        margin: 37px 0;
+      }
+    }
+
+  }
+
+  &.section-checkboxes {
+
+    padding-top: 82px;
+    padding-bottom: 34px;
+
+    @include breakpoint(sm) {
+      padding-top: 63px;
+      padding-bottom: 40px;
+    }
+
+    .block {
+
+      &.block-tagline-button {
+
+        @include breakpoint(sm) {
+          margin-bottom: 2px;
+        }
+
+        .tagline {
+
+          p {
+            font-size: 36px;
+            line-height: 1.2222;
+            font-weight: 300;
+            width: 60%;
+
+            @include breakpoint(md) {
+              width: 100%;
+            }
+
+            @include between(xs, sm) {
+              font-size: 50px;
+              line-height: 1.2;
+            }
+          }
+        }
+
+      }
+
+      &.block-checkboxes {
+
+        @include breakpoint(sm) {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+
+
+        .checkbox-list {
+
+          margin: 18px 0 0 0;
+          padding: 0;
+          list-style: none;
+
+          @include breakpoint(sm) {
+            margin-top: 47px;
+          }
+
+          li {
+            color: $white;
+            font-size: 18px;
+            font-weight: 600;
+            padding-left: 44px;
+            margin: 12px 0;
+            line-height: 32px;
+            
+            opacity: 0.25;
+
+            background-image: url(../images/checkbox-gradient-blue.svg);
+            background-size: 32px 32px;
+            background-position: left center;
+            background-repeat: no-repeat;
+
+            @include breakpoint(lg) {
+              background-position: left top;
+            }
+
+            @include between(xs, sm) {
+              min-height: 42px;
+              margin: 34px 0;
+              padding-left: 69px;
+              font-size: 26px;
+              line-height: 1.23;
+              background-size: 45px 45px;
+            }
+          }
+          
+          &.in-view {
+            li {
+              @include animation(fadeInCheckboxes $time3 $easing forwards);
+            }
+          }
+
+        }
+
+      }
+
+      &.block-button {
+        margin-top: 11px;
+      }
+
+    }
+
+
+  }
+
+  // upcoming events slider
+  &.section-upcoming-events {
+
+    padding-top: 57px;
+    padding-bottom: 34px;
+
+    @include between(xs, sm) {
+      padding-top: 61px;
+      padding-bottom: 53px;
+    }
+
+    .eyebrow-and-button {
+
+      position: relative;
+
+      .button {
+        position: absolute;
+        top: -39px;
+        right: 15px;
+      }
+    }
+
+    .row-carousel {
+      margin-top: 5px;
+
+      @include between(xs, sm) {
+        margin-top: 21px;
+      }
+    }
+
+    .carousel {
+
+      display: block;
+      width: 100%;
+      overflow-x: hidden;
+      padding: 18px;
+
+      // each event block/slide
+      .event-slide {
+
+        display: inline-block;
+        position: relative;
+        float: left;
+        overflow: hidden;
+
+        background: $white;
+        border: 3px solid $white;
+        padding: 20px 20px 30px;
+        margin-right: 26px;
+        width: 100%;
+        max-width: $event_slide_width;
+        color: $dkGray2;
+
+
+        @include box-shadow(2px 2px 14px rgba(0, 0, 0, 0.1));
+        @include border-radius(7px);
+        @include transition(opacity 150ms ease-out, background 150ms ease-out, border 150ms ease-out, color 150ms ease-out);
+
+        @include between(xs, sm) {
+          border-width: 6px;
+          max-width: $event_slide_width_mobile;
+          min-height: 284px;
+          padding: 26px 33px 30px;
+        }
+
+        .event-month {
+          font-weight: 700;
+
+          @include between(xs, sm) {
+            font-size: 22.5px;
+          }
+        }
+
+        .event-days {
+          font-size: 36px;
+          font-weight: 700;
+          padding-top: 0;
+          margin-top: -8px;
+
+          @include between(xs, sm) {
+            font-size: 54px;
+          }
+        }
+
+        .event-location {
+
+          font-size: 12px;
+          padding: 0 0 14px 0;
+
+
+          @include between(xs, sm) {
+            font-size: 18px;
+            line-height: 1.83;
+          }
+
+          &:before {
+            font-family: "Font Awesome 5 Pro";
+            content: "\f3c5";
+            display: inline-block;
+            margin-right: 4px;
+          }
+        }
+
+        .event-title {
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 22px;
+          color: $linkBlue;
+
+          @include transition(color 150ms ease-out);
+
+          @include between(xs, sm) {
+            font-size: 27px;
+          }
+        }
+
+        &:hover {
+          cursor: pointer;
+          background: $dkGray2;
+          border-color: $linkBlue;
+          color: $white;
+
+          .event-title {
+            color: $white;
+          }
+
+          &:after {
+            font-family: "Font Awesome 5 Pro";
+            content: "\f105";
+            display: inline-block;
+            position: absolute;
+            top: 55px;
+            right: -50px;
+            color: $white;
+            background: $linkBlue;
+            padding: 23px 0 0 16px;
+            width: 93px;
+            height: 80px;
+            text-align: left;
+            font-size: 24px;
+
+            @include border-radius(120px);
+
+            @include between(xs, sm) {
+              top: 77px;
+              width: 93px;
+              height: 105px;
+              padding: 26px 0 0 25px;
+              font-size: 35px;
+            }
+          }
+
+        }
+
+      }
+
+    }
+
+    // slick slider overrides
+    .slick-track,
+    .slick-list {
+      overflow: visible;
+    }
+
+    .slick-slider {
+      overflow-x: visible;
+    }
+
+    .slick-track {
+      margin-left: -15px;
+    }
+
+    .slick-slide {
+      width: $event_slide_width + 30px;
+      padding: 0 15px;
+
+      @include between(xs, sm) {
+        width: $event_slide_width_mobile + 30px;
+      }
+
+      &:not(.slick-active) {
+        opacity: 0.5;
+      }
+    }
+
+    .row-carousel-navigation {
+      text-align: center;
+
+      @include between(xs, sm) {
+        margin-top: 20px;
+      }
+    }
+
+    .carousel-navigation {
+      margin: auto;
+    }
+
+    .slick-arrow {
+      background: none;
+      border: none;
+      font-size: 30px;
+      color: $linkBlue;
+      line-height: 1;
+
+      @include between(xs, sm) {
+        font-size: 45px;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &.slick-disabled {
+        color: #adc6d6;
+        opacity: 0.5;
+      }
+    }
+
+    .carousel-dots {
+      display: inline-block;
+      margin: 0 25px;
+
+      @include transform(translateY(-50%));
+    }
+
+    .slick-dotted.slick-slider {
+      margin-bottom: 13px;
+    }
+
+    .slick-dots {
+      position: relative;
+      line-height: 1;
+      bottom: auto;
+
+      li {
+        height: 20px;
+        margin: 0;
+
+        @include between(xs, sm) {
+          height: 30px;
+          width: 30px;
+        }
+
+        button:before {
+          font-size: 8px;
+          color: #adc6d6;
+          opacity: 0.5;
+
+          @include between(xs, sm) {
+            font-size: 12px;
+          }
+        }
+
+        &.slick-active button:before {
+          color: $linkBlue;
+          opacity: 1;
+        }
+
+      }
+
+    }
+
+  }
+
+  // Timeline Blade
+  &.section-timeline {
+
+    padding-bottom: 62px;
+
+    .body-text {
+
+      margin-top: 3px;
+
+      @include breakpoint(sm) {
+        margin-top: 25px;
+      }
+
+      p {
+        font-size: 17px;
+
+        @include between(xs, sm) {
+          font-size: 26px;
+        }
+      }
+    }
+
+    .row.timeline-graphic {
+      margin-top: 47px;
+      margin-left: -30px;
+      margin-right: -30px;
+
+      .timeline-point {
+        border-top: 2px solid #ebebeb;
+
+        &:last-child {
+          border-top-color: transparent;
+        }
+
+        &.col {
+          padding-left: 30px;
+          padding-right: 30px;
+          margin-left: 30px;
+          margin-right: -30px;
+        }
+
+        /*&:before {
+          content: "•";
+          position: absolute;
+          width: 60px;
+          height: 60px;
+          top: -24px; //-25px;
+          left: -7px; //-4px;
+
+          font-size: 45px;
+          color: #ebebeb;
+          line-height: 1;
+
+          background-size: cover;
+
+        }*/
+      }
+    }
+
+    .row.row-block-info {
+      margin-left: -30px;
+      margin-right: -30px;
+    }
+
+    .block-info {
+
+      padding-top: 35px;
+
+      &.col {
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+
+      .tagline {
+
+        margin-bottom: 2px;
+
+        h3 {
+          font-size: 18px;
+          font-weight: bold;
+          line-height: 1.0464;
+
+          @include between(xs, sm) {
+            font-size: 30px;
+          }
+        }
+      }
+
+      .body-text {
+        p {
+          font-size: 15px;
+          line-height: 1.6;
+
+          @include between(xs, sm) {
+            font-size: 22.5px;
+            line-height: 1.467;
+          }
+        }
+      }
+    }
+
+    .col-timeline-info-blocks {
+
+      padding-top: 50px;
+      padding-left: 15px;
+
+      @include breakpoint(sm) {
+        padding-top: 40px;
+      }
+
+      .block-info {
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        padding-top: 0;
+        padding-bottom: 15px;
+        padding-left: 35px;
+        border-left: 2px solid #ebebeb;
+
+        @include breakpoint(sm) {
+          padding-bottom: 30px;
+          margin-bottom: 0;
+          margin-top: 0;
+        }
+
+        .tagline {
+          padding-top: 0;
+
+          @include breakpoint(sm) {
+            margin-top: 0;
+          }
+
+          h3 {
+            line-height: 1;
+
+            @include breakpoint(sm) {
+              margin-top: 0;
+            }
+          }
+        }
+      }
+
+      .row:not(:first-child) {
+
+        .timeline-point:before {
+          top: -13px;
+        }
+
+      }
+
+      .row:last-child .block-info {
+        border-left-color: transparent;
+      }
+
+      .row:first-child .timeline-point:first-child {
+        &:before {
+          content: "";
+          position: absolute;
+          background: $white;
+          height: 10px;
+          width: 10px;
+          z-index: 2;
+        }
+      }
+    }
+
+    // Timeline points and animation
+    .row.timeline-graphic .timeline-point svg {
+      top: -6px;
+      left: 0;
+
+      &.in-view {
+        @include animation(bloom_desktop $time4 $easing forwards);
+      }
+    }
+
+    .col-timeline-info-blocks .timeline-point svg {
+      top: 15px;
+      left: 20px;
+
+      &.in-view {
+        @include animation(bloom_mobile $time4 $easing forwards);
+      }
+    }
+
+    .timeline-point {
+      svg {
+        position: absolute;
+        z-index: 2;
+
+        &.in-view {
+          width: 10px;
+          height: 10px;
+
+          .circle-2 {
+            opacity: 0;
+            @include animation(fadeIn $time3 $easing forwards);
+          }
+
+          .circle-3,
+          .circle-4 {
+            opacity: 0;
+            @include animation(fadeInOut30 $time3 $easing forwards);
+          }
+
+          .circle-5 {
+            opacity: 0;
+            @include animation(fadeInOut10 $time3 $easing forwards);
+          }
+
+        }
+
+        &:not(.in-view) {
+          width: 10px;
+          height: 10px;
+
+          opacity: 0;
+        }
+      }
+    }
+
+  }
+
+  &.section-team {
+    padding-top: 65px;
+
+    @media only screen and (min-width: map-get($grid-breakpoints, sm)) {
+      .row-team {
+        margin-top: -42px;
+        margin-left: -25px;
+        margin-right: -25px;
+      }
+    }
+  }
+
+}

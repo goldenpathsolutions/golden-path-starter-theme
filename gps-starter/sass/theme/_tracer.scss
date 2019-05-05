@@ -1,0 +1,40 @@
+body.show-tracer {
+
+	background-size: 1440px auto !important;
+
+	@include breakpoint(sm){
+		background-size: 621px auto !important;
+	}
+
+	#header, #footer{ background: none !important; }
+
+	&.home {
+		background: linear-gradient(rgba(0,0,255,0.1), rgba(0,0,255,0.1)), url(../tracer/FuelX2019_home@2x.jpg) no-repeat top center;
+
+		@include breakpoint(sm){
+			background: linear-gradient(rgba(0,0,255,0.1), rgba(0,0,255,0.1)), url(../tracer/FuelX2019_home_mobile_cropped.jpg) no-repeat center /*top*/ 17px;
+		}
+	}
+
+	&.technology {
+		background: linear-gradient(rgba(0,0,255,0.1), rgba(0,0,255,0.1)), url(../tracer/FuelX2019_Technology@2x.jpg) no-repeat top center;
+	}
+
+	&.about {
+		background: linear-gradient(rgba(0,0,255,0.1), rgba(0,0,255,0.1)), url(../tracer/FuelX2019_About@2x.jpg) no-repeat top center;
+	}
+
+	&.lets-talk {
+		background: linear-gradient(rgba(0,0,255,0.1), rgba(0,0,255,0.1)), url(../tracer/FuelX2019_Contact@2x.jpg) no-repeat top center;
+	}
+
+	&.why-fuelx {
+		background: linear-gradient(rgba(0,0,255,0.1), rgba(0,0,255,0.1)), url(../tracer/FuelX2019_WhyFuelX@2x.jpg) no-repeat top center;
+	}
+	
+	.section {
+		background-color: rgba(255,0,0,0.2) !important;
+		background-image: none !important;
+	}
+	
+}

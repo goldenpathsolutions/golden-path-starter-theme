@@ -1,0 +1,39 @@
+/**
+ * Main Theme
+ *
+ * Starting point for SASS that defines styles for the starter theme.  These are built on top of the supporting vendor
+ * styling.
+ *
+ * Use gulp sass to compile this code along with the rest of the theme sass into main.css.
+ *
+ * You can add to these if you like, or create your own custom style directory, and override/append that way.
+ * If you don't want to deal with SASS, you can add CSS to style.css, and it will override main.css.
+ * @author Patrick Jackson <pjackson@goldenpathsolutions.com>
+ */
+
+
+@import 'variables';
+@import 'mixins-browser-compatibility';
+@import '_mixins-functions';
+
+// CSS animations here
+@import 'animation';
+
+@import 'classes'; // extend these
+@import 'base/general';
+
+// all new blocks here
+@import 'blocks';
+
+// all new sections here
+@import 'sections';
+
+
+// for cutup only, include tracer images as body background. Remove when done cutting up
+@import 'tracer';
+
+@import 'header';
+//@import '../scss_unused/homepage';
+//@import '../scss_unused/documentation';
+@import 'footer';
+//@import '../scss_unused/formidable';

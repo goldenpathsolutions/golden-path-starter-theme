@@ -128,6 +128,11 @@ gulp.task( 'scripts', function() {
         // End - All BS4 stuff
 
         `${paths.dev}/js/skip-link-focus-fix.js`,
+        `${paths.dev}/js/slick.js`, // adds slick slider behaviors
+        `${paths.dev}/js/parallax.js`, // adds parallax for background images
+        `${paths.dev}/js/simpleLightBox.js`, // adds lightbox behaviors
+
+        `${paths.dev}/js/theme.js`, // JS added for gps-starter theme
 
         // Adding currently empty javascript file to add on for your own themes´ customizations
         // Please add any customizations to this .js file only!

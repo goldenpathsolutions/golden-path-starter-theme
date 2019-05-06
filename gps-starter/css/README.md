@@ -10,4 +10,4 @@ Avoid editing `main.css`.  **If you want to add custom css in the theme without 
 
 The SASS directory at the theme root is where SASS code is located that is compiled to CSS.  The main.scss file is the starting point, and imports the other major components.  In some cases, the vendor sass files import other SASS code located in the src/SASS directory.
 
-You may edit the files in the root SASS directory, and add your own SASS files as needed.  Avoid editing SASS files in the src directory.
+You may edit the files in the theme SASS directory, and add your own SASS files as needed.  Avoid editing SASS files in the src directory; those are downloaded from the vendor.

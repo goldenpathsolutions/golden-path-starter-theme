@@ -87,7 +87,7 @@
                 variableWidth: false,
                 vertical: false,
                 verticalSwiping: false,
-                waitFork: true,
+                waitForAnimate: true,
                 zIndex: 1000
             };
 

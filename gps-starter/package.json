@@ -49,6 +49,7 @@
     "merge2": "^1.2.3",
     "popper.js": "^1.15.0",
     "run-sequence": "^2.2.1",
+    "simple-lightbox": "^2.1.0",
     "understrap": "^0.9.1",
     "undescores-for-npm": "^1.0.0"
   }

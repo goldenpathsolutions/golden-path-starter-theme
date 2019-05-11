@@ -10,7 +10,7 @@ use GPS\Layouts as Layouts;
  * Includes h1 title element, tagline, body text, and button
  * Usually used in page header
  *
- * @author Patrick Jackson <patrickj@montanab.com>
+ * @author Patrick Jackson <pjackson@goldenpathsolutions.com>
  */
 class Title_Block extends Block {
 

@@ -7,7 +7,7 @@ use GPS\Layouts as Layouts;
 /**
  * Funnel with 3 Text Sections Block
  *
- * @author Patrick Jackson <patrickj@montanab.com>
+ * @author Patrick Jackson <pjackson@goldenpathsolutions.com>
  */
 class Funnel_With_3_Text_Sections_Block extends Block {
 

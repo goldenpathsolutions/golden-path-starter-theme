@@ -7,7 +7,7 @@ use GPS\Layouts as Layouts;
 /**
  * small info block
  *
- * @author Patrick Jackson <patrickj@montanab.com>
+ * @author Patrick Jackson <pjackson@goldenpathsolutions.com>
  */
 class Block_Info_Small extends Info_Block {
 

@@ -9,7 +9,7 @@ use GPS\Layouts as Layouts;
  *
  * grid of team members
  *
- * @author Patrick Jackson <patrickj@montanab.com>
+ * @author Patrick Jackson <pjackson@goldenpathsolutions.com>
  */
 class Section_Team extends Blade {
 

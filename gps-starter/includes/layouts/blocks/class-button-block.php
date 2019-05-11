@@ -7,7 +7,7 @@ use GPS\Layouts as Layouts;
 /**
  * Button Block
  *
- * @author Patrick Jackson <patrickj@montanab.com>
+ * @author Patrick Jackson <pjackson@goldenpathsolutions.com>
  */
 class Button_Block extends Block {
 

@@ -9,7 +9,7 @@ use GPS\Layouts as Layouts;
  *
  * Display images as a carousel that automatically advances continuously
  *
- * @author Patrick Jackson <patrickj@montanab.com>
+ * @author Patrick Jackson <pjackson@goldenpathsolutions.com>
  */
 class Block_Infinite_Loop_Carousel extends Block {
 

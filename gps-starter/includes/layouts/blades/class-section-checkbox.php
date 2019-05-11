@@ -11,7 +11,7 @@ use GPS\Layouts as Layouts,
  *
  * Displays tagline and checkboxes blocks
  *
- * @author Patrick Jackson <patrickj@montanab.com>
+ * @author Patrick Jackson <pjackson@goldenpathsolutions.com>
  */
 class Section_Checkbox extends Blade {
 

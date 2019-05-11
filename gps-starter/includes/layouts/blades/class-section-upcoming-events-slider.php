@@ -9,7 +9,7 @@ use GPS\Layouts as Layouts,
 /**
  * Upcoming Events Slider blade
  *
- * @author Patrick Jackson <patrickj@montanab.com>
+ * @author Patrick Jackson <pjackson@goldenpathsolutions.com>
  */
 class Section_Upcoming_Events_Slider extends Blade {
 

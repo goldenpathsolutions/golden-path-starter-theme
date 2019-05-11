@@ -11,7 +11,7 @@ use GPS\Layouts as Layouts,
  *
  * includes tagline, body text, and 4 small info block elements with animated timeline graphic
  *
- * @author Patrick Jackson <patrickj@montanab.com>
+ * @author Patrick Jackson <pjackson@goldenpathsolutions.com>
  */
 class Timeline extends Blade {
 

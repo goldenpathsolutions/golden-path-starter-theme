@@ -11,7 +11,7 @@ use GPS\Layouts as Layouts,
  *
  * Info block and Image block used in the page header
  *
- * @author Patrick Jackson <patrickj@montanab.com>
+ * @author Patrick Jackson <pjackson@goldenpathsolutions.com>
  */
 class Info_With_Image extends Blade {
 

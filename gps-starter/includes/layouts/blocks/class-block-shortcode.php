@@ -9,7 +9,7 @@ use GPS\Layouts as Layouts;
  *
  * text field with block attributes
  *
- * @author Patrick Jackson <patrickj@montanab.com>
+ * @author Patrick Jackson <pjackson@goldenpathsolutions.com>
  */
 class Block_Shortcode extends Block {
 

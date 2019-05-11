@@ -9,7 +9,7 @@ use GPS\Layouts as Layouts;
  *
  * Inserts raw HTML
  *
- * @author Patrick Jackson <patrickj@montanab.com>
+ * @author Patrick Jackson <pjackson@goldenpathsolutions.com>
  */
 class Block_Code extends Block {
 

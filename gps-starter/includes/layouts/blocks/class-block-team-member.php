@@ -9,7 +9,7 @@ use GPS\Layouts as Layouts;
  *
  * head shot, name, and title for a team member
  *
- * @author Patrick Jackson <patrickj@montanab.com>
+ * @author Patrick Jackson <pjackson@goldenpathsolutions.com>
  */
 class Block_Team_Member extends Block {
 

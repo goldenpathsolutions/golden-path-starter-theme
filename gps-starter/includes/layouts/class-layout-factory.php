@@ -7,7 +7,7 @@ namespace GPS\Layouts;
  *
  * Handles processing template layouts
  *
- * @author Patrick Jackson <patrickj@montanab.com>
+ * @author Patrick Jackson <pjackson@goldenpathsolutions.com>
  */
 class Layout_Factory {
 

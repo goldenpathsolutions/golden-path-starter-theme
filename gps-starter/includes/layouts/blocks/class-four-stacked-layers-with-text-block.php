@@ -7,7 +7,7 @@ use GPS\Layouts as Layouts;
 /**
  * Four Stacked Layers with Text Block
  *
- * @author Patrick Jackson <patrickj@montanab.com>
+ * @author Patrick Jackson <pjackson@goldenpathsolutions.com>
  */
 class Four_Stacked_Layers_With_Text_Block extends Block {
 

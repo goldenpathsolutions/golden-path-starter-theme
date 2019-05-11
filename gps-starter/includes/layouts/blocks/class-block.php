@@ -5,7 +5,7 @@ namespace GPS\Layouts\Blocks;
 /**
  * Parent class for layout blocks
  *
- * @author Patrick Jackson <patrickj@montanab.com>
+ * @author Patrick Jackson <pjackson@goldenpathsolutions.com>
  */
 Class Block {
 

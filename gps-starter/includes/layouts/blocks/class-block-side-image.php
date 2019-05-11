@@ -8,7 +8,7 @@ use GPS\Layouts as Layouts;
  * Side Image block
  *
  *
- * @author Patrick Jackson <patrickj@montanab.com>
+ * @author Patrick Jackson <pjackson@goldenpathsolutions.com>
  */
 class Block_Side_Image extends Block {
 

@@ -9,7 +9,7 @@ use GPS\Layouts as Layouts;
  *
  * Uses blocks to allow a variety of options
  *
- * @author Patrick Jackson <patrickj@montanab.com>
+ * @author Patrick Jackson <pjackson@goldenpathsolutions.com>
  */
 class Section_Flexible extends Blade {
 

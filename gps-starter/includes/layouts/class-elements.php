@@ -7,7 +7,7 @@ namespace GPS\Layouts;
  *
  * Reusable Elements used within blocks or blades
  *
- * @author Patrick Jackson <patrickj@montanab.com>
+ * @author Patrick Jackson <pjackson@goldenpathsolutions.com>
  */
 class Elements{
 

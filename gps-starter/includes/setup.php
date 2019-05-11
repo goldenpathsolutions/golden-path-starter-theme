@@ -76,7 +76,7 @@ function mb_dashboard_widget_function(){
 		<li><span class="dashicons dashicons-email"></span> <strong>Project Manager:</strong> 
 			<a href="mailto:helloannakatz@gmail.com">Anna Katz</a></li>
 		<li><span class="dashicons dashicons-email"></span> <strong>Primary Developer:</strong> 
-			<a href="mailto:patrickj@montanab.com">Patrick Jackson</a></li>
+			<a href="mailto:pjackson@goldenpathsolutions.com">Patrick Jackson</a></li>
 	</ul>
 	<?php
 }

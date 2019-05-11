@@ -9,7 +9,7 @@ use GPS\Layouts as Layouts,
 /**
  * Slider blade
  *
- * @author Patrick Jackson <patrickj@montanab.com>
+ * @author Patrick Jackson <pjackson@goldenpathsolutions.com>
  */
 class Slider extends Blade {
 

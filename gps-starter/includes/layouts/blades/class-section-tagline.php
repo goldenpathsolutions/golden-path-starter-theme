@@ -11,7 +11,7 @@ use GPS\Layouts as Layouts,
  *
  * Uses only tagline and button
  *
- * @author Patrick Jackson <patrickj@montanab.com>
+ * @author Patrick Jackson <pjackson@goldenpathsolutions.com>
  */
 class Section_Tagline extends Blade {
 

@@ -199,6 +199,12 @@ gulp.task( 'copy-assets', function() {
     gulp.src( `${paths.node}popper.js/dist/umd/popper.js` )
         .pipe( gulp.dest( `${paths.js}${paths.vendor}` ) );
 
+// Copy Slick Slider
+    /*gulp.src( `${paths.node}slick-carousel/slick/slick.js` )
+        .pipe( gulp.dest( `${paths.js}${paths.vendor}` ) );
+    gulp.src( `${paths.node}popper.js/dist/umd/popper.js` )
+        .pipe( gulp.dest( `${paths.js}${paths.vendor}` ) );*/
+
 // UnderStrap SCSS files
     gulp.src( `${paths.node}understrap/sass/**/*.scss` )
         .pipe( gulp.dest( `${paths.dev}/sass/understrap` ) );
@@ -223,7 +229,7 @@ gulp.task( 'dist', gulp.series('clean-dist', function copyToDistFolder() {
     const ignorePaths = [`!${paths.bower}`, `!${paths.bower}/**`, `!${paths.node}`, `!${paths.node}/**`, `!${paths.dev}`, `!${paths.dev}/**`, `!${paths.dist}`, `!${paths.dist}/**`, `!${paths.distprod}`, `!${paths.distprod}/**`, `!${paths.sass}`, `!${paths.sass}/**`],
     ignoreFiles = [ '!readme.txt', '!readme.md', '!package.json', '!package-lock.json', '!gulpfile.js', '!gulpconfig.json', '!CHANGELOG.md', '!.travis.yml', '!jshintignore',  '!codesniffer.ruleset.xml' ];
 
-    console.log({ ignorePaths, ignoreFiles })
+    console.log({ ignorePaths, ignoreFiles });
 
   return gulp.src( ['**/*', ...ignorePaths, ...ignoreFiles,  '*'], { 'buffer': false } )
   .pipe( replace( '/js/jquery.slim.min.js', `/js${paths.vendor}/jquery.slim.min.js`, { 'skipBinary': true } ) )

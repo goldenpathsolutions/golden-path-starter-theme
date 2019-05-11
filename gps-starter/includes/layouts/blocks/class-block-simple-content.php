@@ -9,7 +9,7 @@ use GPS\Layouts as Layouts;
  *
  * wysiwyg editor content with block attributes
  *
- * @author Patrick Jackson <patrickj@montanab.com>
+ * @author Patrick Jackson <pjackson@goldenpathsolutions.com>
  */
 class Block_Simple_Content extends Block {
 

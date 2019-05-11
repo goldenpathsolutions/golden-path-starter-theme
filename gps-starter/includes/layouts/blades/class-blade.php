@@ -4,7 +4,7 @@ namespace GPS\Layouts\Blades;
 /**
  * Parent class for layout blades
  *
- * @author Patrick Jackson <patrickj@montanab.com>
+ * @author Patrick Jackson <pjackson@goldenpathsolutions.com>
  */
 Class Blade {
 

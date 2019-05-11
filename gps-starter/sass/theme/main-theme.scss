@@ -12,28 +12,26 @@
  */
 
 
-@import 'variables';
-@import 'mixins-browser-compatibility';
-@import '_mixins-functions';
+@import 'variables/variables';
+@import 'mixins/mixins-browser-compatibility';
+@import 'mixins/mixins';
 
 // CSS animations here
-@import 'animation';
+@import 'animations/animation';
 
-@import 'classes'; // extend these
-@import 'base/general';
+// base contains the most fundamental, extensible class and element styling (typography, body, .button, etc.)
+//@import 'base/objects'; // extend these
+//@import 'base/general';
 
 // all new blocks here
-@import 'blocks';
+//@import 'blocks/blocks';
 
 // all new sections here
-@import 'sections';
+//@import 'Sections/sections';
 
 
 // for cutup only, include tracer images as body background. Remove when done cutting up
-@import 'tracer';
+//@import 'development/tracer';
 
-@import 'header';
-//@import '../scss_unused/homepage';
-//@import '../scss_unused/documentation';
-@import 'footer';
-//@import '../scss_unused/formidable';
+//@import 'sections/header';
+//@import 'sections/footer';

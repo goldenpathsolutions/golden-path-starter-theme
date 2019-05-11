@@ -31,7 +31,7 @@ add_action( 'wp_enqueue_scripts', 'theme_js');
 function fuelx_image_sizes(){
 
     // images at 2x
-	add_image_size('blade-bg', 3840, 1248);
+	add_image_size('section-bg', 3840, 1248);
 	add_image_size('half', 1200, 1200);
 	add_image_size('third', 800, 800);
 	add_image_size('third-side-image', 957, 822, true);

@@ -1,26 +1,26 @@
 <?php
 
-namespace GPS\Layouts\Blades;
+namespace GPS\Layouts\Sections;
 
 use GPS\Layouts as Layouts,
 	GPS\Layouts\Blocks as Blocks;
 
 
 /**
- * Upcoming Events Slider blade
+ * Upcoming Events Slider section
  *
  * @author Patrick Jackson <pjackson@goldenpathsolutions.com>
  */
-class Section_Upcoming_Events_Slider extends Blade {
+class Section_Upcoming_Events_Slider extends Section {
 
 	private static $carousel_idx = 0;
-	private $blade_idx;
+	private $section_idx;
 
 	public function __construct() {
 
 		parent::__construct();
 
-		$this->blade_idx = parent::$blade_count;
+		$this->section_idx = parent::$section_count;
 
 		$bg_color   = get_sub_field( 'background_color' );
 		$btn        = get_sub_field( 'button' );
@@ -28,8 +28,8 @@ class Section_Upcoming_Events_Slider extends Blade {
 		$class      = get_sub_field( 'class' );
 		?>
 
-        <section id="blade-<?= $this->blade_idx ?>"
-                 class="blade blade-upcoming-events bg-<?= $bg_color ?> fg-<?= $foreground ?> <?= $class ?>">
+        <section id="section-<?= $this->section_idx ?>"
+                 class="section section-upcoming-events bg-<?= $bg_color ?> fg-<?= $foreground ?> <?= $class ?>">
             <div class="container container-wide">
                 <div class="row eyebrow-and-button">
 					<?php if ( get_sub_field( 'section_heading' ) ): ?>

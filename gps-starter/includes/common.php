@@ -373,7 +373,7 @@ function upcoming_events() {
 	wp_reset_postdata();
 	$count = count( $events );
 	?>
-    <div class="blade_layout_shortcode container_flex" id="upcoming_events" style="position: relative">
+    <div class="section_layout_shortcode container_flex" id="upcoming_events" style="position: relative">
         <div class="container">
             <div class="row prow mx-auto">
                 <div class="event-intro">
@@ -445,7 +445,7 @@ add_shortcode( 'upcoming_events', 'upcoming_events' );
 
 function our_performance_marketing() {
 	?>
-    <div class="blade_far_right container_fluid bg_grey left-angle-bottom our_performance_marketing"
+    <div class="section_far_right container_fluid bg_grey left-angle-bottom our_performance_marketing"
          style="position: relative">
         <div class="container">
             <div class="row prow">

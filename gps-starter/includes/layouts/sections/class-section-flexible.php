@@ -1,30 +1,30 @@
 <?php
 
-namespace GPS\Layouts\Blades;
+namespace GPS\Layouts\Sections;
 
 use GPS\Layouts as Layouts;
 
 /**
- * Flexible Blade
+ * Flexible Section
  *
  * Uses blocks to allow a variety of options
  *
  * @author Patrick Jackson <pjackson@goldenpathsolutions.com>
  */
-class Section_Flexible extends Blade {
+class Section_Flexible extends Section {
 
-	private $blade_idx;
+	private $section_idx;
 
 	public function __construct() {
 
 		parent::__construct();
 
-		$this->blade_idx = parent::$blade_count;
+		$this->section_idx = parent::$section_count;
 
 		$img_obj        = get_sub_field( 'background_image' );
-		$img_style      = ! empty( $img_obj ) && ! get_sub_field( 'parallax' ) ? 'background-image: url(\'' . $img_obj['sizes']['blade-bg'] . '\');' : '';
+		$img_style      = ! empty( $img_obj ) && ! get_sub_field( 'parallax' ) ? 'background-image: url(\'' . $img_obj['sizes']['section-bg'] . '\');' : '';
 		$parallax_cls   = ! empty( $img_obj ) && get_sub_field( 'parallax' ) ? 'parallax-window' : '';
-		$parallax_data  = $parallax_cls ? 'data-parallax="scroll" data-speed="0.1" data-image-src="' . $img_obj['sizes']['blade-bg'] . '"' : '';
+		$parallax_data  = $parallax_cls ? 'data-parallax="scroll" data-speed="0.1" data-image-src="' . $img_obj['sizes']['section-bg'] . '"' : '';
 		$bg_color       = get_sub_field( 'background_color' );
 		//$bg_color_cls   = empty( $img_obj ) ? 'bg-' . $bg_color : '';
 		$bg_color_cls   = 'bg-' . $bg_color;
@@ -32,8 +32,8 @@ class Section_Flexible extends Blade {
 		$text_alignment = get_sub_field( 'text_alignment' );
 		$class          = get_sub_field( 'class' );
 		?>
-        <section id="blade-<?= $this->blade_idx ?>"
-                 class="blade blade-flexible <?= $bg_color_cls ?> fg-<?= $foreground ?> text-<?= $text_alignment ?> <?= $class ?> <?= $parallax_cls ?>" <?= $parallax_data ?>
+        <section id="section-<?= $this->section_idx ?>"
+                 class="section section-flexible <?= $bg_color_cls ?> fg-<?= $foreground ?> text-<?= $text_alignment ?> <?= $class ?> <?= $parallax_cls ?>" <?= $parallax_data ?>
                  style="<?= $img_style ?>">
 
             <div class="container">

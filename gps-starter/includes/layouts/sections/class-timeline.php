@@ -1,43 +1,43 @@
 <?php
 
-namespace GPS\Layouts\Blades;
+namespace GPS\Layouts\Sections;
 
 use GPS\Layouts as Layouts,
 	GPS\Layouts\Blocks as Blocks;
 
 
 /**
- * Timeline blade
+ * Timeline section
  *
  * includes tagline, body text, and 4 small info block elements with animated timeline graphic
  *
  * @author Patrick Jackson <pjackson@goldenpathsolutions.com>
  */
-class Timeline extends Blade {
+class Timeline extends Section {
 
 	private static $timeline_idx = 0;
-	private $blade_idx;
+	private $section_idx;
 
 	public function __construct() {
 
 		parent::__construct();
 
-		$this->blade_idx = parent::$blade_count;
+		$this->section_idx = parent::$section_count;
 
 		Timeline::$timeline_idx ++;
 
 		$img_obj        = get_sub_field( 'background_image' );
-		$img_style      = ! empty( $img_obj ) && ! get_sub_field( 'parallax' ) ? 'background-image: url(\'' . $img_obj['sizes']['blade-bg'] . '\');' : '';
+		$img_style      = ! empty( $img_obj ) && ! get_sub_field( 'parallax' ) ? 'background-image: url(\'' . $img_obj['sizes']['section-bg'] . '\');' : '';
 		$parallax_cls   = ! empty( $img_obj ) && get_sub_field( 'parallax' ) ? 'parallax-window' : '';
-		$parallax_data  = $parallax_cls ? 'data-parallax="scroll" data-speed="0.1" data-image-src="' . $img_obj['sizes']['blade-bg'] . '"' : '';
+		$parallax_data  = $parallax_cls ? 'data-parallax="scroll" data-speed="0.1" data-image-src="' . $img_obj['sizes']['section-bg'] . '"' : '';
 		$bg_color       = get_sub_field( 'background_color' );
 		$bg_color_cls   = empty( $img_obj ) ? 'bg-' . $bg_color : '';
 		$foreground     = get_sub_field( 'foreground' );
 		$text_alignment = get_sub_field( 'text_alignment' );
 		$class          = get_sub_field( 'class' );
 		?>
-        <section id="blade-<?= $this->blade_idx ?>"
-                 class="blade blade-timeline <?= $bg_color_cls ?> fg-<?= $foreground ?> text-<?= $text_alignment ?> <?= $parallax_cls ?> <?= $class ?>" <?= $parallax_data ?>
+        <section id="section-<?= $this->section_idx ?>"
+                 class="section section-timeline <?= $bg_color_cls ?> fg-<?= $foreground ?> text-<?= $text_alignment ?> <?= $parallax_cls ?> <?= $class ?>" <?= $parallax_data ?>
                  style="<?= $img_style ?>"
                  data-start-color="<?= get_sub_field( 'timeline_start' ) ?>"
                  data-end-color="<?= get_sub_field( 'timeline_end' ) ?>">

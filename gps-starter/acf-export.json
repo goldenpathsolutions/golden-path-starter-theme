@@ -69,9 +69,9 @@
             {
                 "key": "field_5c522394f4691",
                 "label": "Sections",
-                "name": "blades_content",
+                "name": "sections_content",
                 "type": "flexible_content",
-                "instructions": "A container for rows of content (aka Blades)",
+                "instructions": "A container for rows of content (aka Sections)",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -1791,7 +1791,7 @@
             {
                 "key": "field_5c53b6d151333",
                 "label": "Hero Layouts",
-                "name": "blades_hero",
+                "name": "sections_hero",
                 "type": "flexible_content",
                 "instructions": "",
                 "required": 0,
@@ -4657,7 +4657,7 @@
                 "label": "Class",
                 "name": "class",
                 "type": "text",
-                "instructions": "Classes are special tags added to HTML elements.  They may be used by your site developer to customize blades",
+                "instructions": "Classes are special tags added to HTML elements.  They may be used by your site developer to customize sections",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {

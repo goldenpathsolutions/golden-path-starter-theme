@@ -45,7 +45,7 @@ class Block_Side_Image extends Block {
 			case "third": return "third-side-image";
 			case "five-twelfths": return "half";
 			case "half": return "half";
-			default: return "blade-bg";
+			default: return "section-bg";
 		}
 	}
 

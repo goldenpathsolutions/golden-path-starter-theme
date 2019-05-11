@@ -1,19 +1,19 @@
 <?php
 
-namespace GPS\Layouts\Blades;
+namespace GPS\Layouts\Sections;
 
 use GPS\Layouts as Layouts,
 	GPS\Layouts\Blocks as Blocks;
 
 
 /**
- * Slider blade
+ * Slider section
  *
  * @author Patrick Jackson <pjackson@goldenpathsolutions.com>
  */
-class Slider extends Blade {
+class Slider extends Section {
 
-	private $blade_idx;
+	private $section_idx;
 	public $is_header = true;
 
 	public function __construct( $is_header = true ) {
@@ -21,18 +21,18 @@ class Slider extends Blade {
 		parent::__construct();
 
 		$this->is_header = $is_header;
-		$this->blade_idx = parent::$blade_count;
+		$this->section_idx = parent::$section_count;
 
 		$slider = get_sub_field( "slider" );
 		$slides = $slider['slides'];
 
 		$video   = $slider['background_video'];
 		$overlay = $slider['overlay'];
-		$bgimg   = $slides[0]['background_image']['sizes']['blade-bg'];
+		$bgimg   = $slides[0]['background_image']['sizes']['section-bg'];
 
 
-		$img_obj       = $bgimg ?: $slider['background_image']['sizes']['blade-bg'];
-		$img_url       = $bgimg ?: $img_obj['sizes']['blade-bg'];
+		$img_obj       = $bgimg ?: $slider['background_image']['sizes']['section-bg'];
+		$img_url       = $bgimg ?: $img_obj['sizes']['section-bg'];
 		$img_style     = ! empty( $img_obj ) && ! get_sub_field( 'parallax' ) ? 'background-image: url(\'' . $img_url . '\');' : '';
 		$parallax_cls  = ! empty( $img_obj ) && get_sub_field( 'parallax' ) ? 'parallax-window' : '';
 		$parallax_data = $parallax_cls ? 'data-parallax="scroll" data-speed="0.1" data-image-src="' . $img_url . '"' : '';
@@ -72,7 +72,7 @@ class Slider extends Blade {
 					?>
                     <div class="slider_container" id="slider_<?= $i; ?>" style="display:<?= $show; ?>">
                         <div class="container" data-slide="<?= $i; ?>"
-                             data-bg="<?= $slide['background_image']['sizes']['blade-bg']; ?>"
+                             data-bg="<?= $slide['background_image']['sizes']['section-bg']; ?>"
                              data-overlay="<?= $slide['background_gradient'] ? 1 : 0; ?>">
                             <div class="row">
                                 <div class="col col-12 col-md-9 col-lg-7 position-<?= $position ?> text-align-<?= $text_align ?>">

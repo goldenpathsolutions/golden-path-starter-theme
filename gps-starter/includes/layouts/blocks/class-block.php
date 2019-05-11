@@ -64,7 +64,7 @@ Class Block {
 	 * Use block with to limit the size of images used
 	 *
 	 * <ul>
-	 * <li>add_image_size('blade-bg', 1200);</li>
+	 * <li>add_image_size('section-bg', 1200);</li>
 	 * <li>add_image_size('half', 600, 600);</li>
 	 * <li>add_image_size('third', 400, 400);</li>
 	 * <li>add_image_size('quarter', 300, 400);</li>
@@ -80,7 +80,7 @@ Class Block {
 			case "third": return "third";
 			case "five-twelfths": return "half";
 			case "half": return "half";
-			default: return "blade-bg";
+			default: return "section-bg";
 		}
 	}
 

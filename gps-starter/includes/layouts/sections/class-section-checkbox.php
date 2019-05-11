@@ -1,27 +1,27 @@
 <?php
 
-namespace GPS\Layouts\Blades;
+namespace GPS\Layouts\Sections;
 
 use GPS\Layouts as Layouts,
 	GPS\Layouts\Blocks as Blocks;
 
 
 /**
- * Checkboxes blade
+ * Checkboxes section
  *
  * Displays tagline and checkboxes blocks
  *
  * @author Patrick Jackson <pjackson@goldenpathsolutions.com>
  */
-class Section_Checkbox extends Blade {
+class Section_Checkbox extends Section {
 
-	private $blade_idx;
+	private $section_idx;
 
 	public function __construct() {
 
 		parent::__construct();
 
-		$this->blade_idx = parent::$blade_count;
+		$this->section_idx = parent::$section_count;
 
 		$bg_color   = get_sub_field( 'background_color' );
 		$btn        = get_sub_field( 'button_block' )['button'];
@@ -29,7 +29,7 @@ class Section_Checkbox extends Blade {
 		$class      = get_sub_field( 'class' );
 		?>
 
-        <section id="blade-<?= $this->blade_idx ?>" class="blade blade-checkboxes bg-<?= $bg_color ?> fg-<?= $foreground ?>  <?= $class ?>">
+        <section id="section-<?= $this->section_idx ?>" class="section section-checkboxes bg-<?= $bg_color ?> fg-<?= $foreground ?>  <?= $class ?>">
             <div class="container">
                 <div class="row">
 

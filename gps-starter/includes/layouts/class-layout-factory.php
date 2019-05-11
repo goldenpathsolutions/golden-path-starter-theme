@@ -12,10 +12,10 @@ namespace GPS\Layouts;
 class Layout_Factory {
 
 	const BLOCKS = 'Blocks';
-	const BLADES = 'Blades';
+	const SECTIONS = 'Sections';
 	const HEADER = true;
 
-	public static function get_layouts( $acf_field, $type = self::BLADES, $is_header = false ) {
+	public static function get_layouts( $acf_field, $type = self::SECTIONS, $is_header = false ) {
 
 		while ( have_rows( $acf_field ) ) {
 			the_row();

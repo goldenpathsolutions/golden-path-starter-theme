@@ -5,7 +5,7 @@ namespace GPS\Layouts;
 /**
  * Layout Elements
  *
- * Reusable Elements used within blocks or blades
+ * Reusable Elements used within blocks or sections
  *
  * @author Patrick Jackson <pjackson@goldenpathsolutions.com>
  */

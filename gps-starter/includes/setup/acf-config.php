@@ -55,4 +55,4 @@ function acf_styling() {
 	';
 }
 
-add_action( 'admin_head', array( __NAMESPACE__ . '\\acf_styling' ) );
+add_action( 'admin_head', __NAMESPACE__ . '\\acf_styling' );

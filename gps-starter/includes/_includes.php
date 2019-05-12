@@ -7,6 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Load theme function files individually
  */
 $includes = array(
+	'/global_constants.php',
 	'/setup/_setup.php',
 	'/shortcodes/_shortcodes.php',
 	'/layouts/_layouts.php',

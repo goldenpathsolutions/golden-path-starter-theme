@@ -13,4 +13,4 @@ function yoasttobottom() {
 	return 'low';
 }
 
-add_filter( 'wpseo_metabox_prio', array( __NAMESPACE__ . '\\yoasttobottom' ) );
+add_filter( 'wpseo_metabox_prio', __NAMESPACE__ . '\\yoasttobottom' );

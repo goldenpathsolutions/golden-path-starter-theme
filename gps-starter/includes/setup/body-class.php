@@ -27,7 +27,7 @@ function body_class_post_slug( $classes, $class ) {
 	return $classes;
 }
 
-add_filter( 'body_class', array( __NAMESPACE__ . '\\body_class_post_slug' ), 10, 2 );
+add_filter( 'body_class', __NAMESPACE__ . '\\body_class_post_slug', 10, 2 );
 
 /**
  *
@@ -49,4 +49,4 @@ function body_class_tracer( $classes, $class ) {
 	return $classes;
 }
 
-add_filter( 'body_class', array( __NAMESPACE__ . '\\body_class_tracer' ), 10, 2 );
+add_filter( 'body_class', __NAMESPACE__ . '\\body_class_tracer', 10, 2 );

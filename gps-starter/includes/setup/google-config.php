@@ -36,4 +36,4 @@ function add_googleanalytics() {
 	}
 }
 
-add_action( 'wp_head', array( __NAMESPACE__ . '\\wpb_add_googleanalytics' ), 44 );
+add_action( 'wp_head', __NAMESPACE__ . '\\wpb_add_googleanalytics', 44 );

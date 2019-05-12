@@ -13,4 +13,4 @@ function add_uploadable_mime_types( $mimes ) {
 
 	return $mimes;
 }
-add_filter( 'upload_mimes', array( __NAMESPACE__ . '\\add_uploadable_mime_types' ) );
+add_filter( 'upload_mimes', __NAMESPACE__ . '\\add_uploadable_mime_types' );

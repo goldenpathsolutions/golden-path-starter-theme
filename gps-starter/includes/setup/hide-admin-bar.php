@@ -10,5 +10,5 @@ namespace GPS\Setup;
 
 // hide admin bar for non-admins
 if ( ! current_user_can( 'administrator' ) ) {
-	add_filter( 'show_admin_bar', array( __NAMESPACE__ . '\\__return_false' ) );
+	add_filter( 'show_admin_bar', __NAMESPACE__ . '\\__return_false' );
 }

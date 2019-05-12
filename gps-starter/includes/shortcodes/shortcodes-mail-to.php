@@ -59,4 +59,4 @@ function mailto( $atts ) {
 
 }
 
-add_shortcode( 'mailto', array( __NAMESPACE__ . '\\mailto') );
+add_shortcode( 'mailto', __NAMESPACE__ . '\\mailto' );

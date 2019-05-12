@@ -16,7 +16,7 @@ namespace GPS\Setup;
 function add_custom_image_sizes(){
 
 }
-add_action('after_setup_theme', array( __NAMESPACE__ . '\\add_custom_image_sizes') );
+add_action('after_setup_theme', __NAMESPACE__ . '\\add_custom_image_sizes' );
 
 /**
  * Add Container Image sizes
@@ -48,4 +48,4 @@ function add_container_image_sizes(){
 
 	}
 }
-add_action('after_setup_theme', array( __NAMESPACE__ . '\\add_container_image_sizes') );
+add_action('after_setup_theme', __NAMESPACE__ . '\\add_container_image_sizes' );

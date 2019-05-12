@@ -1,4 +1,5 @@
 <?php
+namespace GPS\Setup;
 /**
  *
  * MailTo
@@ -58,4 +59,4 @@ function mailto( $atts ) {
 
 }
 
-add_shortcode( 'mailto', 'mailto' );
+add_shortcode( 'mailto', array( __NAMESPACE__ . '\\mailto') );

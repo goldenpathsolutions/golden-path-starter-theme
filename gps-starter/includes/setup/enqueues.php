@@ -1,4 +1,6 @@
 <?php
+
+namespace GPS\Setup;
 /**
  * Setup Enqueues
  *
@@ -25,7 +27,8 @@ function understrap_remove_scripts() {
 
 	// Removes the parent themes stylesheet and scripts from inc/enqueue.php
 }
-add_action( 'wp_enqueue_scripts', 'understrap_remove_scripts', 20 );
+
+add_action( 'wp_enqueue_scripts', array( __NAMESPACE__ . '\\understrap_remove_scripts' ), 20 );
 
 
 /*********************************************************************************************************************
@@ -37,16 +40,16 @@ function theme_enqueue_styles() {
 	$the_theme = wp_get_theme();
 
 	// use the minified version of the main stylesheet, otherwise fail over to the non-minified version
-	if( file_exists( get_stylesheet_directory() . '/css/main.min.css') ){
+	if ( file_exists( get_stylesheet_directory() . '/css/main.min.css' ) ) {
 		wp_enqueue_style( 'gps-main-styles', get_stylesheet_directory_uri() . '/css/main.min.css', array(), $the_theme->get( 'Version' ) );
 	} else {
 		wp_enqueue_style( 'gps-main-styles', get_stylesheet_directory_uri() . '/css/main.css', array(), $the_theme->get( 'Version' ) );
 	}
 
-	wp_enqueue_script( 'jquery');
+	wp_enqueue_script( 'jquery' );
 
 	// use the minified version of the main JavaScript file, otherwise fail over to the non-minified version
-	if( file_exists( get_stylesheet_directory() . '/js/main.min.js') ) {
+	if ( file_exists( get_stylesheet_directory() . '/js/main.min.js' ) ) {
 		wp_enqueue_script( 'gps-main-scripts', get_stylesheet_directory_uri() . '/js/main.min.js', array(), $the_theme->get( 'Version' ), true );
 	} else {
 		wp_enqueue_script( 'gps-main-scripts', get_stylesheet_directory_uri() . '/js/main.min.js', array(), $the_theme->get( 'Version' ), true );
@@ -57,4 +60,5 @@ function theme_enqueue_styles() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
+
+add_action( 'wp_enqueue_scripts', array( __NAMESPACE__ . '\\theme_enqueue_styles' ) );

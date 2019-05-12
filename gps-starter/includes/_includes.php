@@ -7,7 +7,10 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Load theme function files individually
  */
 $includes = array(
-	'/includes/_includes.php',  // starting point for including theme setup, helpers, layouts, shortcodes, etc.
+	'/setup/_setup.php',
+	'/shortcodes/_shortcodes.php',
+	'/layouts/_layouts.php',
+	'/helpers/_helpers.php',
 );
 foreach( $includes as $include){
 	include_once( __DIR__ . $include);

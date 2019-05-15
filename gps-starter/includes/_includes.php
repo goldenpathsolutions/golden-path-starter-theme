@@ -13,6 +13,7 @@ $includes = array(
 	'/layouts/_layouts.php',
 	'/helpers/_helpers.php',
 );
+
 foreach( $includes as $include){
 	include_once( __DIR__ . $include);
 }

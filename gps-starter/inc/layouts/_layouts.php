@@ -7,11 +7,16 @@ namespace GPS\Layouts;
 
 
 $includes = array(
-	'/class-layout-factory.php',     // CSS and JS enqueue/dequeue
+	'/class-layout-factory.php',    // CSS and JS enqueue/dequeue
+	'/class-layout.php',            // Base class for all layout components
 );
 
-foreach ( $includes as $include ) {
-	include_once( __DIR__ . $include );
+foreach ( $includes as $file ) {
+	$filepath = locate_template( 'inc/layouts' . $file );
+	if ( ! $filepath ) {
+		trigger_error( sprintf( 'Error locating /inc/layouts%s for inclusion', $file ), E_USER_ERROR );
+	}
+	require_once $filepath;
 }
 
 /**
@@ -35,12 +40,12 @@ try {
 		$path = str_replace( '_', '-', $path ); // convert _ to -
 		$path = str_replace( 'gps/', '', $path ); // throw away gps
 		$path = substr( $path, 0, strrpos( $path, '/' ) + 1 ) . 'class-' . substr( $path, strrpos( $path, '/' ) + 1, strlen( $path ) );
-		$path = get_stylesheet_directory() . '/includes/' . $path;
+		$path = get_stylesheet_directory() . '/inc/' . $path;
 
 		if ( file_exists( $path ) ) {
 			include_once( $path );
 		}
 
 	} );
-} catch ( Exception $e ) { /* do nothing */
+} catch ( \Exception $e ) { /* do nothing */
 }

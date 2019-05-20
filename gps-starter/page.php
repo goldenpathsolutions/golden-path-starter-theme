@@ -14,8 +14,8 @@
 
 get_header();
 
-\GPS\Layouts\Layout_Factory::get_layouts("blades_hero", \GPS\Layouts\Layout_Factory::BLADES, \GPS\Layouts\Layout_Factory::HEADER);
+\GPS\Layouts\Layout_Factory::get_layouts("sections_hero", \GPS\Layouts\Layout_Factory::SECTIONS, \GPS\Layouts\Layout_Factory::HEADER);
 
-\GPS\Layouts\Layout_Factory::get_layouts("blades_content", \GPS\Layouts\Layout_Factory::BLADES);
+\GPS\Layouts\Layout_Factory::get_layouts("sections_content", \GPS\Layouts\Layout_Factory::SECTIONS);
 
 get_footer(); ?>

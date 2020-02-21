@@ -21,5 +21,23 @@ define('CONTAINER_MAX_WIDTHS', array(
 	'sm' => 540,
 	'md' => 720,
 	'lg' => 960,
-	'xl' => 1140
+	'xl' => 1170
 ));
+
+define('CONTAINER_BREAKPOINTS', array(
+	'xs' => 0,
+	'sm' => 576,
+	'md' => 768,
+	'lg' => 992,
+	'xl' => 1210
+));
+
+
+function get_max_content_width() {
+	$max = 0;
+	foreach ( CONTAINER_MAX_WIDTHS as $width ) {
+		$max = $width > $max ? $width : $max;
+	}
+
+	return $max;
+}

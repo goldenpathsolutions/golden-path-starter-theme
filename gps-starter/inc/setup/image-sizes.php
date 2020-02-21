@@ -1,4 +1,5 @@
 <?php
+
 namespace GPS\Setup;
 /**
  * Set up Image Sizes
@@ -13,39 +14,32 @@ namespace GPS\Setup;
  *
  * - Add yours here
  */
-function add_custom_image_sizes(){
+function add_custom_image_sizes() {
 
 }
-add_action('after_setup_theme', __NAMESPACE__ . '\\add_custom_image_sizes' );
+
+add_action( 'after_setup_theme', __NAMESPACE__ . '\\add_custom_image_sizes' );
 
 /**
  * Add Container Image sizes
  *
  * Image sizes based on grid size
  */
-function add_container_image_sizes(){
+function add_container_image_sizes() {
 
-	if( empty( CONTAINER_MAX_WIDTHS ) ){
-		return;
-	}
+	$max_content_width = \GPS\get_max_content_width();
 
-	foreach( CONTAINER_MAX_WIDTHS as $size ) {
+	add_image_size( 'bg-width-2x', MAX_IMAGE_WIDTH * 2 );
+	add_image_size( 'bg-width', MAX_IMAGE_WIDTH );
+	add_image_size( 'full-width-2x', $max_content_width * 2 );
+	add_image_size( 'full-width', $max_content_width );
+	add_image_size( 'half-2x', $max_content_width );
+	add_image_size( 'half', $max_content_width / 2 );
+	add_image_size( 'third-2x', $max_content_width * 2 / 3 );
+	add_image_size( 'third', $max_content_width / 3 );
+	add_image_size( 'quarter-2x', $max_content_width / 2 );
+	add_image_size( 'quarter', $max_content_width / 4 );
 
-		add_image_size( 'full-width-2x', $size * 2, 1200 );
-		add_image_size( 'full-width', $size, 1200 );
-		add_image_size( 'half-2x', $size, 1200 );
-		add_image_size( 'half', $size / 2, 1200 );
-
-		if( $size > 768 ) {
-			add_image_size( 'third-2x', $size * 2 / 3, 800 );
-			add_image_size( 'third', $size / 3, 800 );
-		}
-
-		if( $size > 480 ) {
-			add_image_size( 'quarter-2x', $size / 2, 800 );
-			add_image_size( 'quarter', $size / 4, 800 );
-		}
-
-	}
 }
-add_action('after_setup_theme', __NAMESPACE__ . '\\add_container_image_sizes' );
+
+add_action( 'after_setup_theme', __NAMESPACE__ . '\\add_container_image_sizes' );

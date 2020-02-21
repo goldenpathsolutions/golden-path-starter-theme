@@ -1,0 +1,665 @@
+{
+    "key": "group_5cde071fc2ffe",
+    "title": "Attributes",
+    "fields": [
+        {
+            "key": "field_5c5248c1c41f7",
+            "label": "Width",
+            "name": "width",
+            "type": "radio",
+            "instructions": "How much of the available space should this block consume?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "one-twelfth": "1\/12",
+                "one-sixth": "1\/6",
+                "quarter": "1\/4",
+                "third": "1\/3",
+                "five-twelfths": "5\/12",
+                "half": "1\/2",
+                "seven-twelfths": "7\/12",
+                "two-thirds": "2\/3",
+                "three-quarters": "3\/4",
+                "five-sixths": "5\/6",
+                "eleven-twelfths": "11\/12",
+                "full": "Full Width"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "full",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5c5504a714d29",
+            "label": "Background Image",
+            "name": "background_image",
+            "type": "image",
+            "instructions": "Overrides the background color when present",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5c5762b79f194",
+            "label": "Color Picker",
+            "name": "color_picker",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "yellow": "Yellow",
+                "white": "White",
+                "ltgray": "Light Gray",
+                "gray": "Gray",
+                "dkgray1": "Dark Gray 1 (body text)",
+                "dkgray2": "Dark Gray 2 (headings)"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "dkgray1",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5c5504e514d2a",
+            "label": "Background Video",
+            "name": "background_video",
+            "type": "file",
+            "instructions": "Overlays the background color and image.  Overlays slide backgrounds as well.  Background image or color may show for some screen sizes as bars to the sides or above\/below. Use MP4 format with H264 codec. Not visible on mobile devices. As a background video, there will be no controls or sound.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5c5b4567c6e42",
+            "label": "Visibility",
+            "name": "visibility",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5c5ba2058f75b",
+                    "label": "Select Visibility",
+                    "name": "select_visibility",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "always": "Always Visible",
+                        "desktop-only": "Desktop Only",
+                        "mobile-only": "Mobile Only",
+                        "breakpoints": "Select Breakpoints"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "default_value": "",
+                    "layout": "vertical",
+                    "return_format": "value",
+                    "save_other_choice": 0
+                },
+                {
+                    "key": "field_5c5ba26d8f75c",
+                    "label": "Select Breakpoints",
+                    "name": "select_breakpoints",
+                    "type": "checkbox",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5c5ba2058f75b",
+                                "operator": "==",
+                                "value": "breakpoints"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "xxs": "xx small (0 - 320px)",
+                        "xs": "extra small (321px - 575px)",
+                        "sm": "small (576px - 767px)",
+                        "md": "medium (768px - 991px)",
+                        "lg": "large (992px - 1199px)",
+                        "xl": "extra large (1200 - ∞)"
+                    },
+                    "allow_custom": 0,
+                    "default_value": [
+                        "Uncheck an option to remove this element on the given screen size."
+                    ],
+                    "layout": "vertical",
+                    "toggle": 0,
+                    "return_format": "value",
+                    "save_custom": 0
+                }
+            ]
+        },
+        {
+            "key": "field_5cde2097d02b7",
+            "label": "Bar Style",
+            "name": "bar_style",
+            "type": "radio",
+            "instructions": "Select the type of bar we see to the far right of this section, if any",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "none": "No Bar",
+                "static": "Static Bar",
+                "animated": "Animated Bar"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "none",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5c5248b4c41f6",
+            "label": "Text Alignment",
+            "name": "text_alignment",
+            "type": "radio",
+            "instructions": "Defines how text is justified for this block.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "left": "Left",
+                "center": "Center",
+                "right": "Right"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "left",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5c523f0756142",
+            "label": "Background Color",
+            "name": "background_color",
+            "type": "radio",
+            "instructions": "Choose a color from the site palette",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "white": "White",
+                "ltgray": "Lt Gray",
+                "dkgray": "Dk Gray"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "white",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5c5506764946a",
+            "label": "Background Treatments",
+            "name": "background_treatments",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "field_5c523f0756142",
+                "field_5c5504a714d29",
+                "field_5c5504e514d2a",
+                "field_5c5506f58345f"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
+            "key": "field_5c5506f58345f",
+            "label": "Parallax",
+            "name": "parallax",
+            "type": "true_false",
+            "instructions": "When true, background image will move at a different rate than the page when scrolling.  Does not apply to background video.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Use Parallax",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5c5a0109e408c",
+            "label": "Foreground",
+            "name": "foreground",
+            "type": "radio",
+            "instructions": "Make foreground text light or dark.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "light": "Light",
+                "dark": "Dark"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "light",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5c5879285f893",
+            "label": "Class",
+            "name": "class",
+            "type": "text",
+            "instructions": "Classes are special tags added to HTML elements.  They may be used by your site developer to customize sections",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5ce1ef60f1f04",
+            "label": "Semantic Heading (H1 default)",
+            "name": "semantic_heading_h1",
+            "type": "radio",
+            "instructions": "While Headings 1-6 define the style, this attribute defines the HTML (semantic) tag used.  Use if, semantically, this is a subhead.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "h1": "H1",
+                "h2": "H2",
+                "h3": "H3",
+                "h4": "H4",
+                "h5": "H5",
+                "h6": "H6",
+                "p": "p"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "h1",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5cde2af1cabf5",
+            "label": "Semantic Heading (H2 default)",
+            "name": "semantic_heading_h2",
+            "type": "radio",
+            "instructions": "While Headings 1-6 define the style, this attribute defines the HTML (semantic) tag used.  Use if, semantically, this is a subhead.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "h1": "H1",
+                "h2": "H2",
+                "h3": "H3",
+                "h4": "H4",
+                "h5": "H5",
+                "h6": "H6",
+                "p": "p"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "h2",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5cde2b93c0a2c",
+            "label": "Semantic Heading (H3 default)",
+            "name": "semantic_heading_h3",
+            "type": "radio",
+            "instructions": "While Headings 1-6 define the style, this attribute defines the HTML (semantic) tag used.  Use if, semantically, this is a subhead.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "h1": "H1",
+                "h2": "H2",
+                "h3": "H3",
+                "h4": "H4",
+                "h5": "H5",
+                "h6": "H6",
+                "p": "p"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "h3",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5cde2dda5793e",
+            "label": "Semantic Heading (H4 default)",
+            "name": "semantic_heading_h4",
+            "type": "radio",
+            "instructions": "While Headings 1-6 define the style, this attribute defines the HTML (semantic) tag used.  Use if, semantically, this is a subhead.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "h1": "H1",
+                "h2": "H2",
+                "h3": "H3",
+                "h4": "H4",
+                "h5": "H5",
+                "h6": "H6",
+                "p": "p"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "h4",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5ce5d687b6bc0",
+            "label": "Semantic Heading (H5 default)",
+            "name": "semantic_heading_h5",
+            "type": "radio",
+            "instructions": "While Headings 1-6 define the style, this attribute defines the HTML (semantic) tag used.  Use if, semantically, this is a subhead.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "h1": "H1",
+                "h2": "H2",
+                "h3": "H3",
+                "h4": "H4",
+                "h5": "H5",
+                "h6": "H6",
+                "p": "p"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "h5",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5ce5d6f0b6bc1",
+            "label": "Semantic Heading (H6 default)",
+            "name": "semantic_heading_h6",
+            "type": "radio",
+            "instructions": "While Headings 1-6 define the style, this attribute defines the HTML (semantic) tag used.  Use if, semantically, this is a subhead.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "h1": "H1",
+                "h2": "H2",
+                "h3": "H3",
+                "h4": "H4",
+                "h5": "H5",
+                "h6": "H6",
+                "p": "p"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "h6",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5c524b7fc41fc",
+            "label": "Position",
+            "name": "position",
+            "type": "radio",
+            "instructions": "How should the block as a whole be positioned in the space available?  Block must be set to a width that is less than the total available space, so position has no effect on a full-width block.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "left": "Left",
+                "center": "Center",
+                "right": "Right"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "center",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5c64703b1d9c7",
+            "label": "Overlay",
+            "name": "overlay",
+            "type": "radio",
+            "instructions": "Usually a semi-transparent layer on top of background videos to help improve contrast with the foreground. Dark overlay darkens background, and Light lightens it.  Currently does not work for images.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "none": "None (default)",
+                "dark": "Dark",
+                "light": "Light"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5ce2f0e9e0ea0",
+            "label": "Columns",
+            "name": "columns",
+            "type": "radio",
+            "instructions": "Indicate the number of columns to be applied to an element.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "col-1": "1 Column",
+                "col-2": "2 Columns",
+                "col-3": "3 Columns",
+                "col-4": "4 Columns"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "col-1",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5ce5eb40ea531",
+            "label": "Attach",
+            "name": "attach",
+            "type": "radio",
+            "instructions": "Attach this to the left or right side of the screen.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "none": "Do not attach",
+                "left": "Attach Left",
+                "right": "Attach right"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "none",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5ce70f4e112c5",
+            "label": "Add Left Border & Bullet",
+            "name": "add_left_border_bullet",
+            "type": "true_false",
+            "instructions": "When selected, shifts content right, adds a border to the left of all but the last element, and adds a large yellow ball (bullet) at the top-left of the block.  The overall effect is that there is a ball and line linking consecutive block.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 20,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 0,
+    "description": "",
+    "modified": 1558653733
+}

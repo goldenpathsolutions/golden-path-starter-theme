@@ -7,7 +7,11 @@ namespace GPS\Shortcodes;
  */
 
 $includes = array(
-	'/shortcodes-mail-to.php',     // Generates bot-busting email link
+	'/shortcodes-mail-to.php',      // Generates bot-busting email link
+	'/shortcodes-year.php',         // returns current year
+	'/shortcodes-address.php',
+	'/shortcodes-business-name.php',
+	'/shortcodes-phone.php',
 );
 
 foreach( $includes as $include ){

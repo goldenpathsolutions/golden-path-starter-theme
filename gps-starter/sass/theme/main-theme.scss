@@ -13,11 +13,13 @@
 
 
 @import 'variables/variables';
-@import 'mixins/mixins-browser-compatibility';
-@import 'mixins/mixins';
+@import 'functions/functions';
+@import 'mixins/BEM';
+@import 'mixins/compatibility';
+@import 'mixins/media';
 
 // CSS animations here
-@import 'animations/animation';
+//@import 'animations/animation';
 
 // base contains the most fundamental, extensible class and element styling (typography, body, .button, etc.)
 //@import 'base/objects'; // extend these

@@ -7,10 +7,14 @@ namespace GPS\Setup;
  */
 
 $includes = array(
+	'/acf-config.php',  // add styling to improve look of ACF
+	'/body-class.php',  // add helpful classes to body tag
 	'/enqueues.php',     // CSS and JS enqueue/dequeue
+	'/google-config.php',    // add Google Tag Manager or Analytics
+	'/hide-admin-bar.php',  // hide admin bar on front end for non-admins
 	'/image-sizes.php',  // define image sizes created on upload to the media library
-	'/text-domain.php',  // define this theme's text domain for multilingual
 	'/mime-types.php',   // define additional mime types allowed to upload to media library (i.e. SVG)
+	'/text-domain.php',  // define this theme's text domain for multilingual
 	'/yoast-seo.php',    // functions that customize Yoast SEO configuration
 );
 

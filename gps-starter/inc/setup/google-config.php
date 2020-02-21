@@ -8,14 +8,14 @@ namespace GPS\Setup;
 
 
 /**
- * Add Google Analytics
+ * Add Google Tag Manager
  *
- * Set the Google Analytics tracking code, GA_TRACKING_CODE,
+ * Set the Google Tag Manager code, GTM_CODE,
  * in wp-config.php, and this will inject the snippet in the head section
  */
 function add_googleanalytics() {
 
-	if ( GA_TRACKING_CODE ) {
+	if ( GTM_CODE ) {
 		?>
         <!-- Google Tag Manager -->
         <script>(function (w, d, s, l, i) {
@@ -30,7 +30,7 @@ function add_googleanalytics() {
                 j.src =
                     'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
                 f.parentNode.insertBefore(j, f);
-            })(window, document, 'script', 'dataLayer', '<?php echo GA_TRACKING_CODE; ?>');</script>
+            })(window, document, 'script', 'dataLayer', '<?php echo GTM_CODE; ?>');</script>
         <!-- End Google Tag Manager -->
 		<?php
 	}

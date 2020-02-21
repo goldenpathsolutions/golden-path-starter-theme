@@ -12,6 +12,9 @@ $includes = array(
 	'/shortcodes/_shortcodes.php',
 	'/layouts/_layouts.php',
 	'/helpers/_helpers.php',
+	'/development/_development.php',
+	'/custom-post-types/_custom-post-types.php',
+	'/options-page/theme-settings.php'
 );
 
 foreach( $includes as $include){

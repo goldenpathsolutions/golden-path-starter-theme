@@ -1,0 +1,210 @@
+{
+    "key": "group_5cde026c16a75",
+    "title": "Page Sections",
+    "fields": [
+        {
+            "key": "field_5c522394f4691",
+            "label": "Sections",
+            "name": "sections_content",
+            "type": "flexible_content",
+            "instructions": "A container for rows of content (aka Sections).  Sections span the full width of a page, and are comprised of Content Blocks.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_5c5245448f709": {
+                    "key": "layout_5c5245448f709",
+                    "name": "section-flexible-single-column",
+                    "label": "Flexible Single Column Section",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5cde25441906a",
+                            "label": "Flexible Single Column Section",
+                            "name": "section_flexible_single_column",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_5cde1e6ab13ba"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5ce6097da9cbe": {
+                    "key": "layout_5ce6097da9cbe",
+                    "name": "section-flexible-double-column",
+                    "label": "Flexible Double Column Section",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5ce6097da9cbf",
+                            "label": "Flexible Double Column Section",
+                            "name": "section_flexible_double_column",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_5ce60a6849b78"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5ce73b61ca411": {
+                    "key": "layout_5ce73b61ca411",
+                    "name": "section-left-image-right-flexible-block",
+                    "label": "Left Image Right Flexible Block Section",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5ce73b61ca412",
+                            "label": "Left Image Right Flexible Block Section",
+                            "name": "section_left_image_right_flexible_block",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_5ce7394e501ee"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5ce55b6aa9dea": {
+                    "key": "layout_5ce55b6aa9dea",
+                    "name": "section-testimonial",
+                    "label": "Testimonial Section",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5ce55b6aa9deb",
+                            "label": "Testimonial Section",
+                            "name": "section_testimonial",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_5ce559771f0f7"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5ce719f40f185": {
+                    "key": "layout_5ce719f40f185",
+                    "name": "section-team-grid",
+                    "label": "Team Grid Section",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5ce719f40f186",
+                            "label": "Team Grid Section",
+                            "name": "section_team_grid",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_5ce7188e76067"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "button_label": "Add Section",
+            "min": "",
+            "max": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "permalink",
+        "the_content",
+        "excerpt",
+        "discussion",
+        "comments",
+        "format",
+        "page_attributes",
+        "featured_image",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1558658061
+}

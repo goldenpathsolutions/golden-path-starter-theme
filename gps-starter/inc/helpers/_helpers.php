@@ -8,6 +8,8 @@ namespace GPS\Helpers;
 
 $includes = array(
 	'/get-svg.php',     // converts SVG image files to inline SVG
+	'/format-phone.php', // format a phone number for tel: tags or display
+	'/interpolate-style.php',   // echos media queries for interstitial breakpoints between low and high
 );
 
 foreach( $includes as $include ){

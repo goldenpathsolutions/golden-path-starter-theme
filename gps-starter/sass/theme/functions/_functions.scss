@@ -1,0 +1,33 @@
+
+// Used by interpolate-style --------------------------------------------------
+// assumes grid-breakpoints are in order, and ignores the first one
+@function get-breakpoints-difference() {
+  $idx: 0;
+  $lowest: 0;
+  $highest: 0;
+  @each $key, $breakpoint in $grid-breakpoints {
+    @if ($idx == 1) {
+      $lowest: $breakpoint;
+    }
+
+    $highest: $breakpoint;
+    $idx: $idx + 1;
+  }
+
+  @return $highest - $lowest;
+}
+
+// get the screen width defined by the 2nd smallest breakpoint
+@function get-2nd-breakpoint() {
+  $idx: 0;
+
+  @each $key, $breakpoint in $grid-breakpoints {
+    @if ($idx == 1) {
+      @return $breakpoint;
+    }
+
+    $idx: $idx + 1;
+  }
+
+}
+// ----------------------------------------------------------------------------------

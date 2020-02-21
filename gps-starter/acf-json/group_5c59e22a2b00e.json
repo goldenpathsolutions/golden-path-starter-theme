@@ -1,0 +1,64 @@
+{
+    "key": "group_5c59e22a2b00e",
+    "title": "Development",
+    "fields": [
+        {
+            "key": "field_5ccc6811c7516",
+            "label": "Instructions",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Tracer images are added as background images to the body tag temporarily during development.  They allow the developer to quickly compare implemented elements with the design mockup, and make detailed adjustments to ensure they are close to pixel perfect.  Sometimes this method helps illustrate issues at the design level, and facilitate conversation around adjustments that can be made during development to compensate.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_5c59e22fe47b3",
+            "label": "Show Tracer",
+            "name": "show_tracer",
+            "type": "true_false",
+            "instructions": "Select to show mockup in background (if available)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 100,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "permalink",
+        "the_content",
+        "excerpt"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1558578810
+}

@@ -1,0 +1,120 @@
+//
+// Media Queries -----------------------------------------------------------------------
+//    Use example:
+//    @include for(md) {
+//      max-width: 900px;
+//    }
+//
+//  We're doing mobile first, so queries are for given size and larger
+
+@mixin for($media) {
+
+  @if map-has-key($grid-breakpoints, $media) {
+    $media: map-get($grid-breakpoints, $media);
+  }
+
+  @media (min-width: $media) {
+    @content;
+  }
+
+}
+
+@mixin between($smallest, $largest) {
+
+  $smallest: if(map-has-key($grid-breakpoints, $smallest), map-get($grid-breakpoints, $smallest), $smallest);
+  $largest: if(map-has-key($grid-breakpoints, $largest), map-get($grid-breakpoints, $largest), $largest);
+
+  @media (min-width: $smallest) and (max-width: $largest) {
+    @content;
+  }
+
+}
+
+@mixin print() {
+  @media print {
+    @content;
+  }
+}
+
+// assumes grid-breakpoints are in order, and ignores the first one
+@function get-breakpoints-difference() {
+  $idx: 0;
+  $lowest: 0;
+  $highest: 0;
+  @each $key, $breakpoint in $grid-breakpoints {
+    @if ($idx == 1) {
+      $lowest: $breakpoint;
+    }
+
+    $highest: $breakpoint;
+    $idx: $idx + 1;
+  }
+
+  @return $highest - $lowest;
+}
+
+// get the screen width defined by the 2nd smallest breakpoint
+@function get-2nd-breakpoint() {
+  $idx: 0;
+
+  @each $key, $breakpoint in $grid-breakpoints {
+    @if ($idx == 1) {
+      @return $breakpoint;
+    }
+
+    $idx: $idx + 1;
+  }
+
+}
+
+// linear interpolation for style
+@mixin interpolate-style( $style, $smallest, $largest ) {
+
+  $slope: ( $largest - $smallest ) /  get-breakpoints-difference();
+  $intercept: $smallest - ( $slope * get-2nd-breakpoint() );
+  $idx: -1;
+
+  #{$style}: $smallest;
+
+  @each $key, $breakpoint in $grid-breakpoints {
+
+    // skip the first two keys
+    @if $idx > 0 {
+      @include media-breakpoint-up($key) {
+        #{$style}: $breakpoint * $slope + $intercept;
+      }
+    }
+
+    $idx: $idx + 1;
+
+  }
+
+}
+
+
+/*
+ * Equal Interval interpolation
+ *
+ * Not as faithful as linear interpolation above
+ */
+@mixin interpolate-style-equal-interval( $style, $smallest, $largest ) {
+
+  $interval: ( $largest - $smallest ) / ( length($grid-breakpoints) - 2 );
+  $idx: -1;
+
+  #{$style}: $smallest;
+
+  @each $key, $breakpoint in $grid-breakpoints {
+
+    // skip the first two keys
+    @if $idx > 0 {
+      @include media-breakpoint-up($key) {
+        #{$style}: $smallest + ( $idx * $interval );
+      }
+    }
+
+    $idx: $idx + 1;
+
+  }
+
+}

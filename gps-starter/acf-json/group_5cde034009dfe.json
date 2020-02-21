@@ -1,0 +1,23 @@
+{
+    "key": "group_5cde034009dfe",
+    "title": "Portfolio",
+    "fields": [],
+    "location": [
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "247"
+            }
+        ]
+    ],
+    "menu_order": 3,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1558578820
+}

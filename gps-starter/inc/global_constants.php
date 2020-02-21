@@ -32,6 +32,8 @@ define('CONTAINER_BREAKPOINTS', array(
 	'xl' => 1210
 ));
 
+$max_image_width = CONTAINER_MAX_WIDTHS['xl'] * 2;
+define('MAX_IMAGE_WIDTH', $max_image_width);
 
 function get_max_content_width() {
 	$max = 0;

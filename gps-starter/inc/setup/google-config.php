@@ -13,9 +13,9 @@ namespace GPS\Setup;
  * Set the Google Tag Manager code, GTM_CODE,
  * in wp-config.php, and this will inject the snippet in the head section
  */
-function add_googleanalytics() {
+function add_google_analytics() {
 
-	if ( GTM_CODE ) {
+	if ( defined('GTM_CODE') ) {
 		?>
         <!-- Google Tag Manager -->
         <script>(function (w, d, s, l, i) {
@@ -36,4 +36,4 @@ function add_googleanalytics() {
 	}
 }
 
-add_action( 'wp_head', __NAMESPACE__ . '\\wpb_add_googleanalytics', 44 );
+add_action( 'wp_head', __NAMESPACE__ . '\\add_google_analytics', 44 );

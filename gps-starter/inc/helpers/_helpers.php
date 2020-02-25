@@ -10,6 +10,7 @@ $includes = array(
 	'/get-svg.php',     // converts SVG image files to inline SVG
 	'/format-phone.php', // format a phone number for tel: tags or display
 	'/interpolate-style.php',   // echos media queries for interstitial breakpoints between low and high
+	'/menu-helpers.php',        // includes wp_get_menu_array
 );
 
 foreach( $includes as $include ){

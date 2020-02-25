@@ -16,6 +16,7 @@ $includes = array(
 	'/mime-types.php',   // define additional mime types allowed to upload to media library (i.e. SVG)
 	'/text-domain.php',  // define this theme's text domain for multilingual
 	'/yoast-seo.php',    // functions that customize Yoast SEO configuration
+	'/menus.php',        // includes functions to set up menus (register menus)
 );
 
 foreach( $includes as $include ){

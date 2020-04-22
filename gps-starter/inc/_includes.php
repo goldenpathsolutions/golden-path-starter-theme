@@ -14,7 +14,8 @@ $includes = array(
 	'/helpers/_helpers.php',
 	//'/development/_development.php',
 	'/custom-post-types/_custom-post-types.php',
-	'/options-pages/theme-settings.php'
+	'/options-pages/theme-settings.php',
+	'/blocks/_blocks.php',
 );
 
 foreach( $includes as $include){

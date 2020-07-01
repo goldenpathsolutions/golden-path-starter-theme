@@ -9,6 +9,7 @@ namespace GPS\Setup;
 $includes = array(
 	'/acf-config.php',  // add styling to improve look of ACF
 	'/body-class.php',  // add helpful classes to body tag
+	'/code-snippets.php', // insert code snippets in parts of each page
 	'/enqueues.php',     // CSS and JS enqueue/dequeue
 	'/google-config.php',    // add Google Tag Manager or Analytics
 	'/hide-admin-bar.php',  // hide admin bar on front end for non-admins

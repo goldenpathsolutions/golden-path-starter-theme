@@ -22,8 +22,8 @@
 //@import 'animations/animation';
 
 // base contains the most fundamental, extensible class and element styling (typography, body, .button, etc.)
-//@import 'base/objects'; // extend these
-//@import 'base/general';
+@import 'base/general';
+@import 'base/classes';
 
 // all new blocks here
 //@import 'blocks/blocks';

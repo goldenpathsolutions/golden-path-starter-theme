@@ -1,0 +1,16 @@
+
+
+// create styles for block editor color palette
+@each $slug, $color in $palette{
+  .has-#{$slug}-color{
+    color: $color;
+  }
+  .has-#{$slug}-background-color{
+    background-color: $color;
+  }
+}
+
+.loading{
+  background: url('../assets/ajax-loader.gif') center no-repeat;
+  background-size: auto;
+}

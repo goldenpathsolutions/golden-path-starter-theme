@@ -1,0 +1,250 @@
+
+*{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+html,body {
+  position: relative;
+  margin: 0;
+  background-color: $white;
+  overflow-x: hidden;
+
+  &.modal-open{
+    overflow: hidden;
+  }
+}
+
+body{
+  min-height: 100vh;
+  padding-bottom: 594px; // initial space for footer content
+}
+
+/**:focus {
+  outline: none !important;
+}*/
+
+.wrapper{
+  padding: 0;
+}
+
+.content-area{
+  padding: 0;
+}
+
+// sitewidth setting
+.container {
+  width: 100%;
+  max-width: $content_width;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $grid-gutter-width / 2;
+  padding-right: $grid-gutter-width / 2;
+
+  @include media-breakpoint-down(xs){
+    padding-left: $grid-gutter-width / 2;
+    padding-right: $grid-gutter-width / 2;
+  }
+
+  @include modifier(wide){
+    @include media-breakpoint-up(lg){
+      max-width: $content_wide_width;
+    }
+  }
+}
+
+.entry-content{
+  .is-default &{
+    @include interpolate-style(padding-top, 25px, 75px);
+    @include interpolate-style(margin-bottom, 42px, 92px);
+  }
+}
+
+.desktop-only {
+  // visible
+}
+
+.desktop-menu-only{
+  @include for($mobileMenuBreakpoint){
+    display: none;
+  }
+}
+
+.mobile-menu-only{
+  display: none;
+
+  @include for($mobileMenuBreakpoint){
+    display: inline-block;
+  }
+}
+
+.mobile-only {
+  display: none;
+}
+
+@include media-breakpoint-down(sm) {
+  .desktop-only {
+    display: none !important;
+  }
+  .mobile-only {
+    display: block;
+  }
+}
+
+.show-xl {
+  display: block !important;
+}
+
+.hide-xl {
+  display: none !important;
+}
+
+@include between(md, lg) {
+  .show-lg {
+    display: block !important;
+  }
+  .hide-lg {
+    display: none !important;
+  }
+}
+
+@include between(sm, md) {
+  .show-md {
+    display: block !important;
+  }
+  .hide-md {
+    display: none !important;
+  }
+}
+
+@include between(xs, sm) {
+  .show-sm {
+    display: block !important;
+  }
+  .hide-sm {
+    display: none !important;
+  }
+}
+
+@include between(xxs, xs) {
+  .show-xs {
+    display: block !important;
+  }
+  .hide-xs {
+    display: none !important;
+  }
+}
+
+@include between(0, xxs) {
+  .show-xxs {
+    display: block !important;
+  }
+  .hide-xxs {
+    display: none !important;
+  }
+}
+
+img {
+
+  &, &.full {
+    width: 100%;
+    height: auto;
+  }
+
+  border: 0;
+
+  &:hover {
+    border: 0 !important;
+  }
+}
+
+.video-wrapper {
+
+  display: none; // only show (background) video on desktop
+
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  z-index: 2;
+
+  @media screen and (min-width: map-get($grid-breakpoints, sm)) {
+    display: block;
+  }
+
+  video {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    min-height: 100%;
+
+    @include transform(translate(-50%, -50%));
+
+  }
+}
+
+
+.thin {
+  font-weight: 300;
+}
+
+.container_fluid {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+.center {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.pull-left{
+  margin-right: auto;
+  margin-left: 0;
+}
+
+.pull-right{
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.text-align-left {
+  text-align: left;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.position-left {
+  float: left;
+}
+
+.position-right {
+  float: right;
+}
+
+.position-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.flex-spacer{
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}

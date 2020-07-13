@@ -56,3 +56,22 @@ function acf_styling() {
 }
 
 add_action( 'admin_head', __NAMESPACE__ . '\\acf_styling' );
+
+
+/**
+ * Configure color palette on color picker
+ * @see https://www.kristinfalkner.com/add-custom-color-palette-acf-pro-color-picker-field/
+ */
+function acf_input_admin_footer() { ?>
+	<script type="text/javascript">
+        (function($) {
+            acf.add_filter('color_picker_args', function( args, $field ){
+                // add the hexadecimal codes here for the colors you want to appear as swatches
+                args.palettes = ['#ffffff', '#c1c1c1', '#4c4c4c', '#343434', '#cc9e52', '#e17000', '#c10b24', '#00a9e0', '#283590', '#92d400'];
+                // return colors
+                return args;
+            });
+        })(jQuery);
+	</script>
+<?php }
+add_action('acf/input/admin_footer', __NAMESPACE__ . '\\acf_input_admin_footer');

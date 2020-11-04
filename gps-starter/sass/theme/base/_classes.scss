@@ -1,7 +1,7 @@
 
 
 // create styles for block editor color palette
-@each $slug, $color in $palette{
+@each $slug, $color in $colors{
   .has-#{$slug}-color{
     color: $color;
   }

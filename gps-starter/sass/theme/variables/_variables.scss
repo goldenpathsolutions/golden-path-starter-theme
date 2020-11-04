@@ -5,5 +5,204 @@
  */
 
 
+/*
+ * Theme Variables
+ *
+ * Overrides bootstrap4/_variables.scss - check there for a variable before creating a new one
+ */
 
 
+// colors
+$colors: () !default;
+$colors: map-merge((
+
+  // grays
+		"white":        #FFFFFF, // bg-primary
+		"black":        #000000, // headers
+), $colors);
+
+$primary:       map-get($colors, "black");
+
+
+// grid
+
+$grid-gutter-width: 16px;
+$container-padding: 20px;
+
+$container-max-widths: (
+		sm: 544px,
+		md: 736px,
+		lg: 960px,
+		xl: 1168px,
+		xxl: 1368px
+);
+
+$grid-breakpoints: (
+		xs: 0,
+		sm: 576px,
+		md: 768px,
+		lg: 992px,
+		xl: 1168px + ($container-padding * 2),
+		xxl: 1368px + ($container-padding * 2)
+);
+
+$content_width: map-get($container-max-widths, xl);
+$content_wide_width: map-get($container-max-widths, xxl);
+
+$mobileLayoutBreakpoint: md; //
+$mobileMenuBreakpoint: md;
+
+// fonts
+$font-family-sans-serif: 'Public Sans', Helvetica, Arial, sans-serif;
+$font-family-base: $font-family-sans-serif;
+
+$font-size-base: 1rem;
+
+$font-weight-thin:              100;
+$font-weight-extra-light:       200;
+$font-weight-light:             300;
+$font-weight-normal:            400;
+$font-weight-semi-bold:         600;
+$font-weight-bold:              700;
+
+// font profiles
+$font: (
+		size-d: ( // desktop
+				base: 			$font-size-base, // 16px
+				body-small:     0.875rem,        // 14px
+				body-large:     1.375rem,        // 22px
+				button: 		1rem,            // 16px
+				primary-nav: 	1.125rem,        // 18px
+				footer-nav: 	0.9375rem,       // 15px
+				h1:				4.375rem,        // 70px
+				h1-subhead:     1.375rem,        // 22px
+				h2: 			3.125rem,        // 50px
+				h2sm:           2.5rem,          // 40px
+				h2xs:           2.5rem,          // 40px default page title
+				h2-section:      0.8125rem,      // 13px success story section break
+				h2-subhead:     1.375rem,        // 22px
+				h3lg:           1.875rem,        // 30px
+				h3:             1.25rem,         // 20px
+				h4:             1rem,            // 16px
+				h5:             0.875rem,        // 14px
+				quote-large:    2rem,            // 32px
+				citation:       1rem,            // 16px
+				caption:        0.75rem,         // 12px
+				tagline:        1.75rem,         // 28px
+
+		),
+		size-m: ( // mobile
+				base: 			$font-size-base, // 16px
+				body-small:     0.875rem,        // 14px
+				body-large:     1.375rem,        // 22px
+				button: 		1rem,            // 16px
+				primary-nav: 	1.125rem,        // 18px
+				footer-nav: 	0.9375rem,       // 15px
+				h1:				3.125rem,        // 50px
+				h2: 			2.1875rem,       // 35px
+				h3:             1.25rem,         // 20px
+				h4:             0.875rem,        // 14px
+				h5:             0.875rem,        // 14px
+				quote-large:    1.75rem,         // 28px
+				citation:       0.875rem,        // 14px
+				caption:        0.75rem,         // 12px
+				tagline:        1.25rem,         // 20px
+		),
+		line-height-d: (
+				base: 			1.75,            // 28px
+				body-small:     1.57142857,      // 22px
+				body-large:     1.27272727,      // 28px
+				button: 		normal,
+				primary-nav: 	1.167,           // 21px
+				footer-nav: 	1.2,             // 18px
+				h1:				0.97142857,      // 68px
+				h2: 			1.16,            // 58px
+				h3:             1.1,             // 22px
+				h4:             1.2,             // 19px
+				h5:             1.2,             // 16.8px
+				quote-large:    1.15625,         // 37px
+				citation:       1.1875,          // 19px
+				caption:        1.6666666667,    // 20px
+				tagline:        1.19,            // 33px
+		),
+		line-height-m: (
+				base: 			1.75,            // 28px
+				body-small:     1.57142857,      // 22px
+				body-large:     1.27272727,      // 28px
+				button: 		normal,
+				primary-nav: 	1.167,           // 21px
+				footer-nav: 	1.2,             // 18px
+				h1:				0.9714,          // 68px
+				h2: 			1.16,            // 58px
+				h3:             1.1,             // 22px
+				h4:             1.2,             // 19px
+				h5:             1.2,             // 16.8px
+				quote-large:    1.17857143,      // 33px
+				citation:       1.14285714,      // 16px
+				caption:        1.6666666667,    // 20px
+				tagline:        1.19,            // 33px
+		),
+		font-weight: (
+				base: 			$font-weight-light,
+				body-small:     $font-weight-light,
+				body-large:     $font-weight-extra-light,
+				button: 		$font-weight-semi-bold,
+				primary-nav: 	$font-weight-bold,
+				footer-nav: 	$font-weight-bold,
+				h1:				$font-weight-bold,
+				h2: 			$font-weight-bold,
+				h3:             $font-weight-bold,
+				h4:             $font-weight-bold,
+				h5:             $font-weight-bold,
+				quote-large:    $font-weight-bold,
+				citation:       $font-weight-normal,
+				caption:        $font-weight-light,
+				tagline:        $font-weight-light,
+		),
+		letter-spacing-d:(
+				base: 			-0.03em,        // -0.48px
+				body-small:     -0.03em,        // -0.42px
+				body-large:     -0.0305em,      // -0.67px
+				button: 		-0.048em,
+				primary-nav: 	-0.03em,
+				footer-nav: 	0,
+				h1:				-0.03028571em,  // -2.12px
+				h2: 			-0.0304em,      // -1.52px
+				h3:             -0.0305em,
+				h4:             -0.03125em,     // -0.5px
+				h5:             -0.03125em,
+				quote-large:    -0.0303em,      // -0.97px
+				citation:       -0.03em,        // -0.48px
+				caption:        -0.03em,        // -0.36px
+				tagline:        0,
+		),
+		letter-spacing-m:(
+				base: 			-0.03em,        // -0.48px
+				body-small:     -0.03em,        // -0.42px
+				body-large:     -0.0305em,      // -0.67px
+				button: 		-0.048em,
+				primary-nav: 	-0.03em,
+				footer-nav: 	0.14em,
+				h1:				-0.0152em,
+				h2: 			-0.0302em,      // -1.06px
+				h3:             -0.0305em,
+				h4:             -0.03em,
+				h5:             -0.042em,
+				quote-large:    -0.0303em,      // -0.85px
+				citation:       -0.03em,        // -0.42px
+				caption:        -0.03em,        // -0.36
+				tagline:        0,
+		)
+);
+
+// buttons
+$btn-padding-y:         0.875em;
+$btn-padding-x:         1.525em;
+$btn-font-size:         1rem;
+$btn-line-height:       1.1875;
+$btn-border-radius:     4px;
+$btn-font-weight:       $font-weight-semi-bold;
+
+// animations/transitions
+$transition-base: .3s;
+$btn-transition: color $transition-base ease-in-out, opacity $transition-base ease-in-out, background-color $transition-base ease-in-out, border-color $transition-base ease-in-out, box-shadow $transition-base ease-in-out;

@@ -1,24 +1,20 @@
 {
-  "browserSyncOptions" : {
-    "proxy": "gps-starter.local",
-    "notify": false
-  },
-  "browserSyncWatchFiles" : [
-    "./css/*.min.css",
-    "./js/*.min.js",
-    "./**/*.php"
-  ],
-  "paths" : {
-    "js": "./js",
-    "css": "./css",
-    "img": "./img",
+	"browserSyncOptions": {
+		"proxy": "gps-start.local/",
+		"notify": false,
+		"files": ["./css/*.min.css", "./js/*.min.js", "./**/*.php"]
+	},
+	"paths": {
+		"js": "./js",
+		"css": "./css",
+		"fonts": "./fonts",
+		"img": "./img",
 		"imgsrc": "./src/img",
-    "sass": "./sass",
-    "node": "./node_modules/",
-    "bower": "./bower_components/",
-    "dev": "./src",
-    "dist": "./dist",
-    "distprod": "./dist-product",
-    "vendor": ""
-  }
+		"sass": "./sass",
+		"node": "./node_modules",
+		"composer": "./vendor",
+		"dev": "./src",
+		"dist": "./dist",
+		"distprod": "./dist-product"
+	}
 }
